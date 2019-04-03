@@ -49,18 +49,21 @@ Royale News is distributed under the terms of the GNU GPL
 
 Images used in screenshot
 
-https://www.pexels.com/photo/beautiful-female-make-up-model-60894/ (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
-https://www.pexels.com/photo/action-adventure-biker-competition-564105/ (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
-https://www.pexels.com/photo/action-adults-celebration-clouds-433452/ (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
-https://www.pexels.com/photo/man-doing-ice-skiing-on-snow-field-in-shallow-focus-photography-848618/ (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
-https://www.pexels.com/photo/apple-devices-books-business-coffee-572056/ (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
-advertisement.jpg self created GPLv2 
+https://pxhere.com/en/photo/1364962 ( https://pxhere.com/en/license | https://creativecommons.org/publicdomain/zero/1.0/ - CCO )
+https://pxhere.com/en/photo/850478 ( https://pxhere.com/en/license | https://creativecommons.org/publicdomain/zero/1.0/ - CCO )
+https://pxhere.com/en/photo/42871 ( https://pxhere.com/en/license | https://creativecommons.org/publicdomain/zero/1.0/ - CCO )
+https://pxhere.com/en/photo/146974 ( https://pxhere.com/en/license | https://creativecommons.org/publicdomain/zero/1.0/ - CCO )
+
+
 
 Other Images  
 image-1.jpg self created GPLv2 
 image-2.jpg self created GPLv2 
-image-3.jpg self created GPLv2 
+image-3.jpg self created GPLv2
+Header advertisement self created GPLv2
 close-btn.png self created GPLv2
+
+
 
 == Installation ==
 

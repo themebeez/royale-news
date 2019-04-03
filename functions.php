@@ -50,6 +50,7 @@ if ( ! function_exists( 'royale_news_setup' ) ) :
 		add_image_size( 'royale-news-thumbnail-1', 200, 150, true );
 		add_image_size( 'royale-news-thumbnail-2', 370, 241, true );
 		add_image_size( 'royale-news-thumbnail-3', 761, 492, true );
+		add_image_size( 'royale-news-thumbnail-4', 900, 600, true ); // used for featured section sliders
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -173,6 +174,17 @@ function royale_news_widgets_init() {
 	
 }
 add_action( 'widgets_init', 'royale_news_widgets_init' );
+
+
+/**
+ * Enqueue scripts and styles for admin.
+ */
+function royale_news_admin_enqueue() {
+
+	wp_enqueue_style( 'royale-news-admin', get_template_directory_uri() . '/admin/css/admin.css' );
+
+}
+add_action( 'admin_enqueue_scripts', 'royale_news_admin_enqueue' );
 
 
 /**
