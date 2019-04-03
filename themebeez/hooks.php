@@ -460,7 +460,7 @@ if( ! function_exists( 'royale_news_search_action' ) ) :
 					</div><!-- .search-icon -->
 				</div><!-- .search-container.pull-right -->
 			</div><!-- .col-md-2.hidden-xs.hidden-sm -->
-			<div class="col-md-12">
+			<div class="col-md-12 search-form-main-container">
 				<div class="search-form-container">
 					<?php
 						get_search_form();

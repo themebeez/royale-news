@@ -9,11 +9,10 @@ if ( ! class_exists( 'Royale_News_Sidebar_Widget_One' ) ) :
 	/**
 	* News Sidebar Widget One Class
 	*/
-	class Royale_News_Sidebar_Widget_One extends WP_Widget
-	{
+	class Royale_News_Sidebar_Widget_One extends WP_Widget {
 		
-		function __construct()
-		{
+		function __construct() {
+
 			$opts = array(
 				'classname' => 'recent-posts',
 				'description'	=> esc_html__( 'Displays posts. Place it in "Sidebar" or "Footer Widget Area".', 'royale-news' )
@@ -23,6 +22,7 @@ if ( ! class_exists( 'Royale_News_Sidebar_Widget_One' ) ) :
 		}
 
 		function widget( $args, $instance ) {
+
 			$title = apply_filters( 'widget_title', ! empty( $instance['title'] ) ? $instance['title'] : '', $instance, $this->id_base );
 			$cat = ! empty( $instance[ 'cat' ] ) ? $instance[ 'cat' ] : absint( 0 );
 			$post_no = ! empty( $instance[ 'post_no' ] ) ? $instance[ 'post_no' ] : absint( 6 );
@@ -39,64 +39,60 @@ if ( ! class_exists( 'Royale_News_Sidebar_Widget_One' ) ) :
 				); 
 				$query_one = new WP_Query( $arguments_one );
 				if( $query_one->have_posts() ) :
-				?>
+				    ?>
 					<div class="widget-content clearfix">
 						<?php
-							$i = 0;
-							while( $query_one->have_posts() ) :
-								$query_one->the_post();
-								if( $i%2 == 0 ) :
-						?>
-								<div class="clearfix visible-xs"></div>
-						<?php
-								endif;
-						?>
-								<div class="col-xs-12 col-sm-12 col-md-12">
-									<div class="row small-news-container">
-										<div class="clearfix small-news-content">										
-											<div class="small-thumbnail">
-                                                <a href="<?php the_permalink(); ?>">
-												<?php
-													if( has_post_thumbnail() ) :
-														the_post_thumbnail( 'royale-news-thumbnail-1', array( 'class' => 'img-responsive' ) );
-													else :
-												?>
-													<img src="<?php echo esc_url( get_template_directory_uri() . '/themebeez/assets/images/image-3.jpg' ); ?>" class="img-responsive">
-												<?php
-													endif;
-												?>
-													<div class="mask"></div><!-- .mask -->
-                                                </a>
-											</div><!-- .small-thumbnail -->
-											<div class="news-detail">
-												<h5 class="news-title">
-													<a href="<?php the_permalink(); ?>">
-														<?php
-															the_title();
-														?>
-													</a>
-												</h5><!-- .news-title -->
-												<div class="entry-meta">
-													<?php
-														royale_news_get_date();
-													?>    
-												</div><!-- .entry-meta -->
-											</div><!-- .news-detail -->
-										</div><!-- .clearfix.small-news-content -->
-									</div><!-- .small-news-container -->
-								</div>
-						<?php
-								$i = $i + 1;
-							endwhile;
-							wp_reset_postdata();
+						$i = 0;
+						while( $query_one->have_posts() ) :
+							$query_one->the_post();
+							if( $i%2 == 0 ) :
+                                ?>
+							    <div class="clearfix visible-xs"></div>
+                                <?php
+							endif;
+					        ?>
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<div class="row small-news-container">
+									<div class="clearfix small-news-content">	
+										<div class="small-thumbnail">
+                                            <a href="<?php the_permalink(); ?>">
+								                <?php
+												if( has_post_thumbnail() ) :
+													the_post_thumbnail( 'royale-news-thumbnail-1', array( 'class' => 'img-responsive' ) );
+												else :
+								                    ?>
+												    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/image-3.jpg' ); ?>" class="img-responsive">
+								                    <?php
+												endif;
+								                ?>
+												<div class="mask"></div><!-- .mask -->
+                                            </a>
+										</div><!-- .small-thumbnail -->
+										<div class="news-detail">
+											<h5 class="news-title">
+												<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+											</h5><!-- .news-title -->
+											<div class="entry-meta">
+												<?php royale_news_get_date(); ?>  
+                                                <?php royale_news_get_comments_no(); ?>   
+											</div><!-- .entry-meta -->
+										</div><!-- .news-detail -->
+									</div><!-- .clearfix.small-news-content -->
+								</div><!-- .small-news-container -->
+							</div>
+			                <?php
+							$i = $i + 1;
+						endwhile;
+						wp_reset_postdata();
 						?>
 					</div>
-				<?php 
+				    <?php 
 				endif;
 			echo $args[ 'after_widget' ]; 
 		}
 
 		function update( $new_instance, $old_instance ) {
+
 			$instance = $old_instance;
 
 			$instance[ 'title' ] = sanitize_text_field( $new_instance[ 'title' ] );
@@ -119,17 +115,17 @@ if ( ! class_exists( 'Royale_News_Sidebar_Widget_One' ) ) :
 			<p>
 				<label for="<?php echo esc_attr( $this->get_field_id( 'cat' ) )?>"><strong><?php echo esc_html__( 'Select Category: ', 'royale-news' ); ?></strong></label>
 				<?php
-					$cat_args = array(
-						'orderby'	=> 'name',
-						'hide_empty'	=> 0,
-						'id'	=> $this->get_field_id( 'cat' ),
-						'name'	=> $this->get_field_name( 'cat' ),
-						'class'	=> 'widefat',
-						'taxonomy'	=> 'category',
-						'selected'	=> absint( $cat ),
-						'show_option_all'	=> esc_html__( 'Show Recent Posts', 'royale-news' )
-					);
-					wp_dropdown_categories( $cat_args );
+				$cat_args = array(
+					'orderby'	=> 'name',
+					'hide_empty'	=> 0,
+					'id'	=> $this->get_field_id( 'cat' ),
+					'name'	=> $this->get_field_name( 'cat' ),
+					'class'	=> 'widefat',
+					'taxonomy'	=> 'category',
+					'selected'	=> absint( $cat ),
+					'show_option_all'	=> esc_html__( 'Show Recent Posts', 'royale-news' )
+				);
+				wp_dropdown_categories( $cat_args );
 				?>
 			</p>
 			<p>
@@ -148,7 +144,9 @@ if( ! class_exists( 'Royale_News_Sidebar_Widget_Two' ) ) :
      * @since 1.0.0
      */
     class Royale_News_Sidebar_Widget_Two extends WP_Widget {
+
         function __construct() {
+
             $opts = array(
                 'classname'   => '',
                 'description' => esc_html__( 'Social Links Widget. Place it in "Sidebar".', 'royale-news' ),
@@ -164,7 +162,6 @@ if( ! class_exists( 'Royale_News_Sidebar_Widget_Two' ) ) :
 
             $facebook       = ! empty( $instance['facebook'] ) ? $instance['facebook'] : '';
             $twitter        = ! empty( $instance['twitter'] ) ? $instance['twitter'] : '';
-            $google_plus    = ! empty( $instance['google_plus'] ) ? $instance['google_plus'] : '';
             $instagram      = ! empty( $instance['instagram'] ) ? $instance['instagram'] : '';
             $linkedin       = ! empty( $instance['linkedin'] ) ? $instance['linkedin'] : '';
             $youtube       	= ! empty( $instance['youtube'] ) ? $instance['youtube'] : '';
@@ -179,8 +176,8 @@ if( ! class_exists( 'Royale_News_Sidebar_Widget_Two' ) ) :
             <div class="widget-social-links">
                 <ul class="social-links-list">
                     <?php
-                        if( !empty( $facebook ) ) :
-                    ?>
+                    if( !empty( $facebook ) ) :
+                        ?>
                         <li class="facebook-link">
                         	<a href="<?php echo esc_attr( esc_url( $facebook ) ); ?>" class="clearfix">
                         		<?php esc_html_e( 'Facebook', 'royale-news'); ?>
@@ -189,10 +186,11 @@ if( ! class_exists( 'Royale_News_Sidebar_Widget_Two' ) ) :
                         		</span>                        		
                         	</a>
                         </li>
-                    <?php
-                        endif;
-                        if( !empty( $twitter ) ) :
-                    ?>
+                        <?php
+                    endif;
+
+                    if( !empty( $twitter ) ) :
+                        ?>
                         <li class="twitter-link">
                         	<a href="<?php echo esc_attr( esc_url( $twitter ) ); ?>" class="clearfix">
                         		<?php esc_html_e( 'Twitter', 'royale-news'); ?>
@@ -201,22 +199,11 @@ if( ! class_exists( 'Royale_News_Sidebar_Widget_Two' ) ) :
                         		</span>
                         	</a>
                         </li>
-                    <?php
-                        endif;
-                        if( !empty( $google_plus ) ) :
-                    ?>
-                        <li class="googleplus-link">
-                        	<a href="<?php echo esc_attr( esc_url( $google_plus ) ); ?>" class="clearfix">
-                        		<?php esc_html_e( 'Google Plus', 'royale-news'); ?>
-                        		<span class="social-icon">
-                        			<i class="fa fa-google-plus"></i>
-                        		</span>
-                        	</a>
-                        </li>
-                    <?php
-                        endif;
-                        if( !empty( $instagram ) ) :
-                    ?>
+                        <?php
+                    endif;
+
+                    if( !empty( $instagram ) ) :
+                        ?>
                         <li class="instagram-link">
                         	<a href="<?php echo esc_attr( esc_url( $instagram ) ); ?>" class="clearfix">
                         		<?php esc_html_e( 'Instagram', 'royale-news'); ?>
@@ -225,10 +212,11 @@ if( ! class_exists( 'Royale_News_Sidebar_Widget_Two' ) ) :
                         		</span>
                         	</a>
                         </li>
-                    <?php
-                        endif;
-                        if( !empty( $linkedin ) ) :
-                    ?>
+                        <?php
+                    endif;
+
+                    if( !empty( $linkedin ) ) :
+                        ?>
                         <li class="linkedin-link">
                         	<a href="<?php echo esc_attr( esc_url( $linkedin ) ); ?>" class="clearfix">
                         		<?php esc_html_e( 'Linked In', 'royale-news'); ?>
@@ -237,10 +225,11 @@ if( ! class_exists( 'Royale_News_Sidebar_Widget_Two' ) ) :
                         		</span>
                         	</a>
                         </li>
-                    <?php
-                        endif;
-                        if( !empty( $youtube ) ) :
-                    ?>
+                        <?php
+                    endif;
+
+                    if( !empty( $youtube ) ) :
+                        ?>
                         <li class="youtube-link">
                         	<a href="<?php echo esc_attr( esc_url( $youtube ) ); ?>" class="clearfix">
                         		<?php esc_html_e( 'Youtube', 'royale-news'); ?>
@@ -249,8 +238,8 @@ if( ! class_exists( 'Royale_News_Sidebar_Widget_Two' ) ) :
                         		</span>
                        		</a>
                        	</li>
-                    <?php
-                        endif;
+                        <?php
+                    endif;
                     ?>
                 </ul>
             </div>
@@ -260,12 +249,12 @@ if( ! class_exists( 'Royale_News_Sidebar_Widget_Two' ) ) :
         }
 
         function update( $new_instance, $old_instance ) {
+
             $instance = $old_instance;
 
             $instance[ 'title' ]        = sanitize_text_field( $new_instance[ 'title' ] );
             $instance[ 'facebook' ]     = esc_url_raw( $new_instance[ 'facebook' ] );
             $instance[ 'twitter' ]      = esc_url_raw( $new_instance[ 'twitter' ] );
-            $instance[ 'google_plus' ]  = esc_url_raw( $new_instance[ 'google_plus' ] );
             $instance[ 'instagram' ]    = esc_url_raw( $new_instance[ 'instagram' ] );
             $instance[ 'linkedin' ]    	= esc_url_raw( $new_instance[ 'linkedin' ] );
             $instance[ 'youtube' ]      = esc_url_raw( $new_instance[ 'youtube' ] );
@@ -279,7 +268,6 @@ if( ! class_exists( 'Royale_News_Sidebar_Widget_Two' ) ) :
                 'title'         => '',
                 'facebook'      => '',
                 'twitter'       => '',
-                'google_plus'   => '',
                 'instagram'     => '',
                 'linkedin'     	=> '',
                 'youtube'       => '',
@@ -308,13 +296,6 @@ if( ! class_exists( 'Royale_News_Sidebar_Widget_Two' ) ) :
             </p> 
 
             <p>
-                <label for="<?php echo esc_attr( $this->get_field_id( 'google_plus' ) ); ?>">
-                    <strong><?php esc_html_e( 'Google Plus Link:', 'royale-news' ); ?></strong>
-                </label>
-                <input type="text" class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'google_plus' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'google_plus' ) ); ?>" value="<?php echo esc_attr( $instance['google_plus'] ); ?>">
-            </p>
-
-            <p>
                 <label for="<?php echo esc_attr( $this->get_field_id( 'instagram' ) ); ?>">
                     <strong><?php esc_html_e( 'Instagram Link:', 'royale-news' ); ?></strong>
                 </label>
@@ -337,5 +318,4 @@ if( ! class_exists( 'Royale_News_Sidebar_Widget_Two' ) ) :
             <?php
         }
     }
-
 endif;

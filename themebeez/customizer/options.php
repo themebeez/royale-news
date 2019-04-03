@@ -1,50 +1,43 @@
 <?php
 
+require get_template_directory() . '/themebeez/customizer/customizer-choices.php';
+
 $default = royale_news_get_default_theme_options();
 
-$categories = get_terms( 'category' );
-$cat = array();
-
-foreach( $categories as $category ) {
-	$cat[$category->term_id] = $category->name;
-}
-
 $wp_customize->add_panel( 'royale_news_options', array(
-	'title'			=> esc_html__( 'Theme Options', 'royale-news' ),
-	'description'	=> esc_html__( 'Royale News Customization Options', 'royale-news' ),
-	'priority'		=> 10	
+	'title'				=> esc_html__( 'Theme Options', 'royale-news' ),
+	'description'		=> esc_html__( 'Royale News Customization Options', 'royale-news' ),
+	'priority'			=> 10	
 ) );
 
 // Site Title Font Size
 $wp_customize->add_setting('royale_news_site_title_font_size',array(
 	'sanitize_callback' => 'royale_news_sanitize_number_absint',
-	'default' => $default['royale_news_site_title_font_size'],
+	'default' 			=> $default['royale_news_site_title_font_size'],
 ) );
 
 $wp_customize->add_control(new WP_Customize_Control($wp_customize,'royale_news_site_title_font_size',array(
-	'label' => esc_html__('Site Title Font Size','royale-news'),
-	'section' => 'title_tagline',
-	'settings' => 'royale_news_site_title_font_size',
-	'type'=> 'number',
+	'label' 			=> esc_html__('Site Title Font Size','royale-news'),
+	'section'			=> 'title_tagline',
+	'settings' 			=> 'royale_news_site_title_font_size',
+	'type'				=> 'number',
 )));
 
 // Logo Position Options
 $wp_customize->add_setting('royale_news_logo_position',array(
 	'sanitize_callback' => 'royale_news_sanitize_select',
-	'default' => $default['royale_news_logo_position'],
+	'default' 			=> $default['royale_news_logo_position'],
 ) );
 
 $wp_customize->add_control(new WP_Customize_Control($wp_customize,'royale_news_logo_position',array(
-	'label' => esc_html__('Logo Position','royale-news'),
-	'description' => esc_html__( 'If logo is placed at center, then the header advertisement area will be disabled.', 'royale-news' ),
-	'section' => 'title_tagline',
-	'settings' => 'royale_news_logo_position',
-	'type'=> 'select',
-	'choices' => array(
-		'left' => esc_html__( 'Left', 'royale-news' ),
-		'center' => esc_html__( 'Center', 'royale-news' ),
-	),
+	'label' 			=> esc_html__('Logo Position','royale-news'),
+	'description' 		=> esc_html__( 'If logo is placed at center, then the header advertisement area will be disabled.', 'royale-news' ),
+	'section' 			=> 'title_tagline',
+	'settings' 			=> 'royale_news_logo_position',
+	'type'				=> 'select',
+	'choices' 			=> royale_news_logo_align_choices(),
 )));
+
 
 /*------------------------------------------------
 		Top Header Options
@@ -52,10 +45,10 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize,'royale_news_l
 
 // Ticker News Options
 $wp_customize->add_section( 'royale_news_ticker_news_options', array(
-	'priority'		=> 20,
-	'title'			=> esc_html__( 'Ticker News Options', 'royale-news' ),
-	'description'	=> esc_html__( 'Configure Ticker News', 'royale-news' ),
-	'panel'			=> 'royale_news_options'	
+	'priority'			=> 20,
+	'title'				=> esc_html__( 'Ticker News Options', 'royale-news' ),
+	'description'		=> esc_html__( 'Configure Ticker News', 'royale-news' ),
+	'panel'				=> 'royale_news_options'	
 ) );
 
 $wp_customize->add_setting( 'royale_news_ticker_news_title', array(
@@ -74,75 +67,75 @@ $wp_customize->add_setting( 'royale_news_ticker_news_category', array(
 ) );
 
 $wp_customize->add_control( new Royale_News_Dropdown_Multiple_Chooser( $wp_customize, 'royale_news_ticker_news_category', array(
-	'label' => esc_html__('Choose Category','royale-news'),
-	'section' => 'royale_news_ticker_news_options',
-	'settings' => 'royale_news_ticker_news_category',
-	'choices'		=> $cat,
+	'label' 			=> esc_html__('Choose Category','royale-news'),
+	'section' 			=> 'royale_news_ticker_news_options',
+	'settings' 			=> 'royale_news_ticker_news_category',
+	'choices'			=> royale_news_categories_choices(),
 ) ) );
 
 $wp_customize->add_setting('royale_news_ticker_news_no',array(
 	'sanitize_callback' => 'royale_news_sanitize_number_absint',
-	'default' =>  $default['royale_news_ticker_news_no'],
+	'default' 			=>  $default['royale_news_ticker_news_no'],
 ) );
 
 $wp_customize->add_control( 'royale_news_ticker_news_no', array(
-	'label' => esc_html__('No of Posts','royale-news'),
-	'section' => 'royale_news_ticker_news_options',
-	'settings' => 'royale_news_ticker_news_no',
-	'type'=> 'number',
+	'label' 			=> esc_html__('No of Posts','royale-news'),
+	'section' 			=> 'royale_news_ticker_news_options',
+	'settings' 			=> 'royale_news_ticker_news_no',
+	'type'				=> 'number',
 ) );
 
 
 // Current Date Options
 $wp_customize->add_section( 'royale_news_current_date_options', array(
-	'priority'		=> 20,
-	'title'			=> esc_html__( 'Current Date Option', 'royale-news' ),
-	'description'	=> esc_html__( 'Configure Current Date', 'royale-news' ),
-	'panel'			=> 'royale_news_options'	
+	'priority'			=> 20,
+	'title'				=> esc_html__( 'Current Date Option', 'royale-news' ),
+	'description'		=> esc_html__( 'Configure Current Date', 'royale-news' ),
+	'panel'				=> 'royale_news_options'	
 ) );
 
 $wp_customize->add_setting('royale_news_enable_current_date',array(
 	'sanitize_callback' => 'royale_news_sanitize_checkbox',
-	'default' => $default['royale_news_enable_current_date'],
+	'default' 			=> $default['royale_news_enable_current_date'],
 ) );
 
 $wp_customize->add_control(new WP_Customize_Control($wp_customize,'royale_news_enable_current_date',array(
-	'label' => esc_html__('Show Current Date','royale-news'),
-	'section' => 'royale_news_current_date_options',
-	'settings' => 'royale_news_enable_current_date',
-	'type'=> 'checkbox',
+	'label' 			=> esc_html__('Show Current Date','royale-news'),
+	'section' 			=> 'royale_news_current_date_options',
+	'settings' 			=> 'royale_news_enable_current_date',
+	'type'				=> 'checkbox',
 )));
 
 // Search Button Options
 $wp_customize->add_section( 'royale_news_search_btn_options', array(
-	'priority'		=> 20,
-	'title'			=> esc_html__( 'Search Button Option', 'royale-news' ),
-	'description'	=> esc_html__( 'Configure Search Button', 'royale-news' ),
-	'panel'			=> 'royale_news_options'	
+	'priority'			=> 20,
+	'title'				=> esc_html__( 'Search Button Option', 'royale-news' ),
+	'description'		=> esc_html__( 'Configure Search Button', 'royale-news' ),
+	'panel'				=> 'royale_news_options'	
 ) );
 
 $wp_customize->add_setting('royale_news_enable_search_btn',array(
 	'sanitize_callback' => 'royale_news_sanitize_checkbox',
-	'default' => $default['royale_news_enable_search_btn'],
+	'default' 			=> $default['royale_news_enable_search_btn'],
 ) );
 
 $wp_customize->add_control(new WP_Customize_Control($wp_customize,'royale_news_enable_search_btn',array(
-	'label' => esc_html__('Show Search Button','royale-news'),
-	'section' => 'royale_news_search_btn_options',
-	'settings' => 'royale_news_enable_search_btn',
-	'type'=> 'checkbox',
+	'label' 			=> esc_html__('Show Search Button','royale-news'),
+	'section' 			=> 'royale_news_search_btn_options',
+	'settings' 			=> 'royale_news_enable_search_btn',
+	'type'				=> 'checkbox',
 )));
 
 
 
-/*
-		Footer Settings
-*/
+/*-----------------------------------------
+  	Footer Option
+-----------------------------------------*/
 $wp_customize->add_section( 'royale_news_copyright_options', array(
-	'priority'		=> 20,
-	'title'			=> esc_html__( 'Copyright Text Option', 'royale-news' ),
-	'description'	=> esc_html__( 'Configure Copyright Text', 'royale-news' ),
-	'panel'			=> 'royale_news_options'	
+	'priority'			=> 20,
+	'title'				=> esc_html__( 'Copyright Text Option', 'royale-news' ),
+	'description'		=> esc_html__( 'Configure Copyright Text', 'royale-news' ),
+	'panel'				=> 'royale_news_options'	
 ) );
 
 // Copyright Text
@@ -160,67 +153,69 @@ $wp_customize->add_control( 'royale_news_copyright_text', array(
 
 // Scroll Top Options
 $wp_customize->add_section( 'royale_news_scroll_top_options', array(
-	'priority'		=> 20,
-	'title'			=> esc_html__( 'Scroll Top Button Option', 'royale-news' ),
-	'description'	=> esc_html__( 'Configure Scroll Top Button', 'royale-news' ),
-	'panel'			=> 'royale_news_options'	
+	'priority'			=> 20,
+	'title'				=> esc_html__( 'Scroll Top Button Option', 'royale-news' ),
+	'description'		=> esc_html__( 'Configure Scroll Top Button', 'royale-news' ),
+	'panel'				=> 'royale_news_options'	
 ) );
 
 $wp_customize->add_setting('royale_news_enable_scroll_top',array(
 	'sanitize_callback' => 'royale_news_sanitize_checkbox',
-	'default' => $default['royale_news_enable_scroll_top'],
+	'default' 			=> $default['royale_news_enable_scroll_top'],
 ) );
 
 $wp_customize->add_control(new WP_Customize_Control($wp_customize,'royale_news_enable_scroll_top',array(
-	'label' => esc_html__('Show Scroll Top Button','royale-news'),
-	'section' => 'royale_news_scroll_top_options',
-	'settings' => 'royale_news_enable_scroll_top',
-	'type'=> 'checkbox',
+	'label' 			=> esc_html__('Show Scroll Top Button','royale-news'),
+	'section' 			=> 'royale_news_scroll_top_options',
+	'settings' 			=> 'royale_news_enable_scroll_top',
+	'type'				=> 'checkbox',
 )));
 
 /*-----------------------------------------
   	BreadCrumb Option
 -----------------------------------------*/
 $wp_customize->add_section( 'royale_news_breadcrumb_option', array(
-	'priority'		=> 20,
-	'title'			=> esc_html__( 'Breadcrumb Option', 'royale-news' ),
-	'description'	=> esc_html__( 'Configure Breadcrumb', 'royale-news' ),
-	'panel'			=> 'royale_news_options'
+	'priority'			=> 20,
+	'title'				=> esc_html__( 'Breadcrumb Option', 'royale-news' ),
+	'description'		=> esc_html__( 'Configure Breadcrumb', 'royale-news' ),
+	'panel'				=> 'royale_news_options'
 ) );
 
 $wp_customize->add_setting('royale_news_enable_breadcrumb',array(
 	'sanitize_callback' => 'royale_news_sanitize_checkbox',
-	'default' => $default['royale_news_enable_breadcrumb'],
+	'default'			=> $default['royale_news_enable_breadcrumb'],
 ) );
 
 $wp_customize->add_control(new WP_Customize_Control($wp_customize,'royale_news_enable_breadcrumb',array(
-	'label' => esc_html__('Show Breadcrumb','royale-news'),
-	'section' => 'royale_news_breadcrumb_option',
-	'settings' => 'royale_news_enable_breadcrumb',
-	'type'=> 'checkbox',
+	'label' 			=> esc_html__('Show Breadcrumb','royale-news'),
+	'section' 			=> 'royale_news_breadcrumb_option',
+	'settings' 			=> 'royale_news_enable_breadcrumb',
+	'type'				=> 'checkbox',
 )));
+
 
 /*-----------------------------------------
   	Blog Page Option
 -----------------------------------------*/
 $wp_customize->add_section( 'royale_news_blogpage_option', array(
-	'priority'		=> 20,
-	'title'			=> esc_html__( 'Blog Page Option', 'royale-news' ),
-	'description'	=> esc_html__( 'Configure Blog page', 'royale-news' ),
-	'panel'			=> 'royale_news_options'
+	'priority'			=> 20,
+	'title'				=> esc_html__( 'Blog Page Option', 'royale-news' ),
+	'description'		=> esc_html__( 'Configure Blog page', 'royale-news' ),
+	'panel'				=> 'royale_news_options'
 ) );
 
 $wp_customize->add_setting('royale_news_enable_featured_post',array(
 	'sanitize_callback' => 'royale_news_sanitize_checkbox',
-	'default' => $default['royale_news_enable_featured_post'],
+	'default' 			=> $default['royale_news_enable_featured_post'],
 ) );
 
 $wp_customize->add_control(new WP_Customize_Control($wp_customize,'royale_news_enable_featured_post',array(
-	'label' => esc_html__('Show Featured Posts','royale-news'),
-	'section' => 'royale_news_blogpage_option',
-	'settings' => 'royale_news_enable_featured_post',
-	'type'=> 'checkbox',
+	'label' 			=> esc_html__('Show Featured Posts','royale-news'),
+	'section' 			=> 'royale_news_blogpage_option',
+	'settings' 			=> 'royale_news_enable_featured_post',
+	'type'				=> 'checkbox',
 )));
+
 
 /*-----------------------------------------
   	Theme Sidebar Option
@@ -243,20 +238,17 @@ $wp_customize->add_control('royale_news_sidebar_position', array(
 	'section'    		=> 'royale_news_sidebar_section',
 	'settings'   		=> 'royale_news_sidebar_position',
 	'type'       		=> 'radio',
-	'choices'    		=> array(
-		'left'   		=> esc_html__('Left','royale-news'),
-		'right'  		=> esc_html__('Right','royale-news'),
-		'none'	 		=> esc_html__('None','royale-news'),
-	),
+	'choices'    		=> royale_news_sidebar_choices(),
 ) );
+
 
 /*-----------------------------------------
   	Theme Meta Option
 -----------------------------------------*/
 $wp_customize->add_section( 'royale_news_meta_options', array(
-	'priority'		=> 20,
-	'title'			=> esc_html__( 'Post Meta Options', 'royale-news' ),
-	'panel'			=> 'royale_news_options'	
+	'priority'			=> 20,
+	'title'				=> esc_html__( 'Post Meta Options', 'royale-news' ),
+	'panel'				=> 'royale_news_options'	
 ) );
 
 // Enable Post Date
@@ -307,23 +299,24 @@ $wp_customize->add_control( 'royale_news_show_categories', array(
 	'type'				=> 'checkbox' 
 ) );
 
+
 /*-----------------------------------------
   	Excerpt Option
 -----------------------------------------*/
 $wp_customize->add_section( 'royale_news_excerpt_options', array(
-	'priority'		=> 20,
-	'title'			=> esc_html__( 'Excerpt', 'royale-news' ),
-	'panel'			=> 'royale_news_options'	
+	'priority'			=> 20,
+	'title'				=> esc_html__( 'Excerpt', 'royale-news' ),
+	'panel'				=> 'royale_news_options'	
 ) );
 
 $wp_customize->add_setting('royale_news_excerpt_length',array(
 	'sanitize_callback' => 'royale_news_sanitize_number_absint',
-	'default' =>  $default['royale_news_excerpt_length'],
+	'default' 			=>  $default['royale_news_excerpt_length'],
 ) );
 
 $wp_customize->add_control( 'royale_news_excerpt_length', array(
-	'label' => esc_html__('Excerpt Length','royale-news'),
-	'section' => 'royale_news_excerpt_options',
-	'settings' => 'royale_news_excerpt_length',
-	'type'=> 'number',
+	'label' 			=> esc_html__('Excerpt Length','royale-news'),
+	'section' 			=> 'royale_news_excerpt_options',
+	'settings' 			=> 'royale_news_excerpt_length',
+	'type'				=> 'number',
 ) );
