@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Royale News 2.0.0\n"
 "Report-Msgid-Bugs-To: https://themebeez.com/support\n"
-"POT-Creation-Date: 2019-04-03 07:10:37+00:00\n"
+"POT-Creation-Date: 2019-04-03 09:13:26+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -45,63 +45,63 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: functions.php:56
+#: functions.php:57
 msgid "Primary"
 msgstr ""
 
-#: functions.php:57
+#: functions.php:58
 msgid "Social"
 msgstr ""
 
-#: functions.php:58
+#: functions.php:59
 msgid "Footer"
 msgstr ""
 
-#: functions.php:115
+#: functions.php:116
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:117
+#: functions.php:118
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:125
+#: functions.php:126
 msgid "Featured Posts Widget Area"
 msgstr ""
 
-#: functions.php:127
+#: functions.php:128
 msgid "Add Main Featured Posts or Slider Featured Posts widgets here."
 msgstr ""
 
-#: functions.php:135
+#: functions.php:136
 msgid "FrontPage Widget Area"
 msgstr ""
 
-#: functions.php:137
+#: functions.php:138
 msgid "Add Main Highlight or Slider Highlight widgets here."
 msgstr ""
 
-#: functions.php:145
+#: functions.php:146
 msgid "FrontPage Bottom Widget Area"
 msgstr ""
 
-#: functions.php:147
+#: functions.php:148
 msgid "Add Widgets Here."
 msgstr ""
 
-#: functions.php:155
+#: functions.php:156
 msgid "Footer Widget Area"
 msgstr ""
 
-#: functions.php:157
+#: functions.php:158
 msgid "Add only four widgets here."
 msgstr ""
 
-#: functions.php:165
+#: functions.php:166
 msgid "Header Advertisement"
 msgstr ""
 
-#: functions.php:167
+#: functions.php:168
 msgid "Add advertisement here."
 msgstr ""
 
@@ -439,11 +439,13 @@ msgstr ""
 msgid " "
 msgstr ""
 
-#: themebeez/theme-tags.php:69 themebeez/theme-tags.php:88
-#: themebeez/theme-tags.php:91 themebeez/theme-tags.php:94
+#: themebeez/theme-tags.php:69
 #. translators: 1: list of categories.
-#. translators: 1: no of comments.
-#. translators: 1: no of comments.
+msgid " %1$s"
+msgstr ""
+
+#: themebeez/theme-tags.php:88 themebeez/theme-tags.php:91
+#: themebeez/theme-tags.php:94
 #. translators: 1: no of comments.
 msgid "&nbsp;%1$s"
 msgstr ""
@@ -847,8 +849,8 @@ msgstr ""
 msgid "RN: Bottom News Layout One"
 msgstr ""
 
-#: themebeez/widgets/royale-news-bottom-widget-layouts.php:131
-#: themebeez/widgets/royale-news-bottom-widget-layouts.php:293
+#: themebeez/widgets/royale-news-bottom-widget-layouts.php:130
+#: themebeez/widgets/royale-news-bottom-widget-layouts.php:292
 #: themebeez/widgets/royale-news-sidebar-widgets.php:112
 #: themebeez/widgets/royale-news-sidebar-widgets.php:279
 #: themebeez/widgets/royale-news-widget-layouts.php:190
@@ -856,19 +858,19 @@ msgstr ""
 msgid "Title: "
 msgstr ""
 
-#: themebeez/widgets/royale-news-bottom-widget-layouts.php:135
-#: themebeez/widgets/royale-news-bottom-widget-layouts.php:297
+#: themebeez/widgets/royale-news-bottom-widget-layouts.php:134
+#: themebeez/widgets/royale-news-bottom-widget-layouts.php:296
 msgid "Select Category:"
 msgstr ""
 
-#: themebeez/widgets/royale-news-bottom-widget-layouts.php:145
-#: themebeez/widgets/royale-news-bottom-widget-layouts.php:307
+#: themebeez/widgets/royale-news-bottom-widget-layouts.php:144
+#: themebeez/widgets/royale-news-bottom-widget-layouts.php:306
 #: themebeez/widgets/royale-news-highlight.php:352
 msgid "Latest Posts"
 msgstr ""
 
-#: themebeez/widgets/royale-news-bottom-widget-layouts.php:153
-#: themebeez/widgets/royale-news-bottom-widget-layouts.php:315
+#: themebeez/widgets/royale-news-bottom-widget-layouts.php:152
+#: themebeez/widgets/royale-news-bottom-widget-layouts.php:314
 #: themebeez/widgets/royale-news-highlight.php:360
 #: themebeez/widgets/royale-news-sidebar-widgets.php:132
 #: themebeez/widgets/royale-news-widget-layouts.php:210
@@ -876,11 +878,11 @@ msgstr ""
 msgid "Post No: "
 msgstr ""
 
-#: themebeez/widgets/royale-news-bottom-widget-layouts.php:172
+#: themebeez/widgets/royale-news-bottom-widget-layouts.php:171
 msgid "Bottom News Layout Two. Place it within \"FrontPage Bottom Widget Area\""
 msgstr ""
 
-#: themebeez/widgets/royale-news-bottom-widget-layouts.php:175
+#: themebeez/widgets/royale-news-bottom-widget-layouts.php:174
 msgid "RN: Bottom News Layout Two"
 msgstr ""
 

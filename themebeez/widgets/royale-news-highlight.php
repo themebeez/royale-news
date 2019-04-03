@@ -93,10 +93,10 @@ if( ! class_exists( 'Royale_News_Main_Featured_Posts' ) ) :
 							$thumbnail_image = '';
 							if( has_post_thumbnail() ) {
 
-								$thumbnail_image = get_the_post_thumbnail_url( get_the_ID(), 'royale-news-thumbnail-2' );
+								$thumbnail_image = get_the_post_thumbnail_url( get_the_ID(), 'royale-news-thumbnail-4' );
 							} else {
 
-								$thumbnail_image = get_template_directory_uri() . '/assets/images/image-2.jpg';
+								$thumbnail_image = get_template_directory_uri() . '/assets/images/image-1.jpg';
 							}
 							?>
 							<div class="highlight-right highlight-right-top" style="background-image: url( <?php echo esc_url( $thumbnail_image ); ?> );">
@@ -137,10 +137,10 @@ if( ! class_exists( 'Royale_News_Main_Featured_Posts' ) ) :
 							$thumbnail_image = '';
 							if( has_post_thumbnail() ) {
 
-								$thumbnail_image = get_the_post_thumbnail_url( get_the_ID(), 'royale-news-thumbnail-2' );
+								$thumbnail_image = get_the_post_thumbnail_url( get_the_ID(), 'royale-news-thumbnail-4' );
 							} else {
 
-								$thumbnail_image = get_template_directory_uri() . '/assets/images/image-2.jpg';
+								$thumbnail_image = get_template_directory_uri() . '/assets/images/image-1.jpg';
 							}
 							?>
 							<div class="highlight-right highlight-right-bottom" style="background-image: url( <?php echo esc_url( $thumbnail_image ); ?> );">									
@@ -283,7 +283,7 @@ if( ! class_exists( 'Royale_News_Slider_Featured_Posts' ) ) :
 								$thumbnail_image = '';
 								if( has_post_thumbnail() ) {
 
-									$thumbnail_image = get_the_post_thumbnail_url( get_the_ID(), 'royale-news-thumbnail-3' );
+									$thumbnail_image = get_the_post_thumbnail_url( get_the_ID(), 'royale-news-thumbnail-4' );
 								} else {
 
 									$thumbnail_image = get_template_directory_uri() . '/assets/images/image-1.jpg';
@@ -413,7 +413,7 @@ if( ! class_exists( 'Royale_News_Main_Featured_Posts_Two' ) ) :
 									$thumbnail_image = '';
 									if( has_post_thumbnail() ) {
 
-										$thumbnail_image = get_the_post_thumbnail_url( get_the_ID(), 'royale-news-thumbnail-3' );
+										$thumbnail_image = get_the_post_thumbnail_url( get_the_ID(), 'royale-news-thumbnail-4' );
 									} else {
 
 										$thumbnail_image = get_template_directory_uri() . '/assets/images/image-1.jpg';
@@ -467,7 +467,7 @@ if( ! class_exists( 'Royale_News_Main_Featured_Posts_Two' ) ) :
 								$thumbnail_image = get_the_post_thumbnail_url( get_the_ID(), 'royale-news-thumbnail-4' );
 							} else {
 
-								$thumbnail_image = get_template_directory_uri() . '/assets/images/image-2.jpg';
+								$thumbnail_image = get_template_directory_uri() . '/assets/images/image-1.jpg';
 							}
 							?>
 							<div class="highlight-right highlight-right-top" style="background-image: url( <?php echo esc_url( $thumbnail_image ); ?> );">
@@ -509,10 +509,10 @@ if( ! class_exists( 'Royale_News_Main_Featured_Posts_Two' ) ) :
 							$thumbnail_image = '';
 							if( has_post_thumbnail() ) {
 
-								$thumbnail_image = get_the_post_thumbnail_url( get_the_ID(), 'royale-news-thumbnail-2' );
+								$thumbnail_image = get_the_post_thumbnail_url( get_the_ID(), 'royale-news-thumbnail-4' );
 							} else {
 
-								$thumbnail_image = get_template_directory_uri() . '/assets/images/image-2.jpg';
+								$thumbnail_image = get_template_directory_uri() . '/assets/images/image-1.jpg';
 							}
 							?>
 							<div class="highlight-right highlight-right-bottom" style="background-image: url( <?php echo esc_url( $thumbnail_image ); ?> );">

@@ -86,8 +86,7 @@ if ( ! class_exists( 'Royale_News_Bottom_Widget_Layout_One' ) ) :
 												<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 											</h5><!-- .news-title -->
 											<div class="entry-meta">
-									            <?php royale_news_get_date(); ?> 
-									            <?php royale_news_get_author(); ?>
+									            <?php royale_news_get_date(); ?>
 												<?php royale_news_get_comments_no(); ?>    
 									        </div><!-- .entry-meta -->
 										</div><!-- .news-detail -->

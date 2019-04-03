@@ -90,6 +90,7 @@ Royale News includes support for Infinite Scroll in Jetpack.
 * Removed links for google plus
 * Customizer issues fixed
 * Screenshot has been changed
+* New thumbnail size for featured widgets
 * CSS fixes
 
 
