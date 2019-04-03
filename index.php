@@ -13,16 +13,23 @@
  */
 
 get_header(); ?>
-	<main class="main-container">
-		<div class="container">
+	<div id="primary" class="content-area <?php royale_news_home_inner_container_class(); ?>">
+		<main id="main" class="site-main">
 			<?php
-				$enable_feature = royale_news_get_option( 'royale_news_enable_featured_post' );
-				if ( is_active_sidebar( 'sidebar-2' ) && $enable_feature == 1 ) {
-					dynamic_sidebar( 'sidebar-2' );
-				}
-			?>
-			<div class="row section">
+			$enable_feature = royale_news_get_option( 'royale_news_enable_featured_post' );
+			if ( is_active_sidebar( 'sidebar-2' ) && $enable_feature == 1 ) {
+				?>
+				<div class="featured-widget-container">
+					<div class="container">
+					<?php dynamic_sidebar( 'sidebar-2' ); ?>
+					</div><!-- .container -->
+				</div>
 				<?php
+			}
+			?>
+			<div class="container">
+				<div class="row">
+					<?php
 					$sidebar_position = royale_news_get_option( 'royale_news_sidebar_position' );
 					if( $sidebar_position == 'none' || !is_active_sidebar( 'sidebar-1' ) ) :
 						$class = 'col-md-12';
@@ -32,42 +39,43 @@ get_header(); ?>
 					if( $sidebar_position == 'left' ) :
 						get_sidebar();
 					endif;
-				?>
-				<div class="<?php echo esc_attr( $class ); ?> sticky-section">
-					<div class="row clearfix news-section">
-						<div class="col-md-12">
-						<?php
-							/* Start the Loop */
-							while ( have_posts() ) : the_post();
+					?>
+					<div class="<?php echo esc_attr( $class ); ?> sticky-section">
+						<div class="row">
+							<div class="col-md-12">
+							<?php
+								/* Start the Loop */
+								while ( have_posts() ) : the_post();
 
-								/*
-								 * Include the Post-Format-specific template for the content.
-								 * If you want to override this in a child theme, then include a file
-								 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-								 */
-								get_template_part( 'template-parts/content', get_post_format() );
+									/*
+									 * Include the Post-Format-specific template for the content.
+									 * If you want to override this in a child theme, then include a file
+									 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+									 */
+									get_template_part( 'template-parts/content', get_post_format() );
 
-							endwhile;
-						?>
-						</div><!-- .col-md-12 -->
-						<?php
-							/**
-							* Hook - royale_news_pagination.
-							*
-							* @hooked royale_news_pagination_action - 10
-							*/
-							do_action( 'royale_news_pagination' );
-						?>
-					</div><!-- .row.clearfix.news-section -->
-				</div><!-- .esc_attr( $class ) -->
+								endwhile;
+							?>
+							</div><!-- .col-md-12 -->
+							<?php
+								/**
+								* Hook - royale_news_pagination.
+								*
+								* @hooked royale_news_pagination_action - 10
+								*/
+								do_action( 'royale_news_pagination' );
+							?>
+						</div><!-- .row.clearfix.news-section -->
+					</div><!-- .esc_attr( $class ) -->
 
-				<?php
+					<?php
 					if( $sidebar_position == 'right' ) :
 						get_sidebar();
 					endif;
-				?>
-			</div><!-- .row.section -->
-		</div><!-- .container -->
-	</main><!-- .main-container -->
+					?>
+				</div><!-- .row.section -->
+			</div><!-- .container -->
+		</main><!-- .main-container -->
+	</div>
 <?php
 get_footer();

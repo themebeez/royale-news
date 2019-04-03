@@ -7,6 +7,10 @@
  * @package Royale_News
  */
 
+$current_theme = wp_get_theme( 'royale-news' );
+
+define( 'ROYALE_NEWS_VERSION', $current_theme->get( 'Version' ) );
+
 if ( ! function_exists( 'royale_news_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -121,17 +125,17 @@ function royale_news_widgets_init() {
 		'name'          => esc_html__( 'Featured Posts Widget Area', 'royale-news' ),
 		'id'            => 'sidebar-2',
 		'description'   => esc_html__( 'Add Main Featured Posts or Slider Featured Posts widgets here.', 'royale-news' ),
-		'before_widget' => '',
-		'after_widget'  => '',
-		'before_title'  => '',
-		'after_title'   => '',
+		'before_widget' => '<div class="row news-section %2$s"><div class="col-md-12">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '<h3 class="section-title">',
+		'after_title'   => '</h3>',
 	) );
 
 	register_sidebar( array(
 		'name'          => esc_html__( 'FrontPage Widget Area', 'royale-news' ),
 		'id'            => 'sidebar-3',
 		'description'   => esc_html__( 'Add Main Highlight or Slider Highlight widgets here.', 'royale-news' ),
-		'before_widget' => '<div class="row clearfix news-section %2$s"><div class="col-md-12">',
+		'before_widget' => '<div class="row news-section %2$s"><div class="col-md-12">',
 		'after_widget'  => '</div></div>',
 		'before_title'  => '<h3 class="section-title">',
 		'after_title'   => '</h3>',
@@ -141,7 +145,7 @@ function royale_news_widgets_init() {
 		'name'          => esc_html__( 'FrontPage Bottom Widget Area', 'royale-news' ),
 		'id'            => 'sidebar-6',
 		'description'   => esc_html__( 'Add Widgets Here.', 'royale-news' ),
-		'before_widget' => '<div class="row clearfix news-section %2$s"><div class="col-md-12">',
+		'before_widget' => '<div class="row news-section %2$s"><div class="col-md-12">',
 		'after_widget'  => '</div></div>',
 		'before_title'  => '<h3 class="section-title">',
 		'after_title'   => '</h3>',
@@ -181,12 +185,10 @@ function royale_news_scripts() {
 
 	wp_enqueue_style( 'royale-news-font', royale_news_fonts_url(), array(), null );
 
-	wp_enqueue_style( 'royale-news-skin', get_template_directory_uri() . '/themebeez/assets/dist/css/main.css' );
+	wp_enqueue_style( 'royale-news-skin', get_template_directory_uri() . '/assets/dist/css/main.css' );
 	
-
-	wp_enqueue_script( 'royale-news-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 	
-	wp_enqueue_script( 'royale-news-main', get_template_directory_uri() . '/themebeez/assets/dist/js/bundle.min.js', array('jquery'), '20151215', true );
+	wp_enqueue_script( 'royale-news-main', get_template_directory_uri() . '/assets/dist/js/bundle.min.js', array('jquery'), ROYALE_NEWS_VERSION, true );
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

@@ -25,7 +25,7 @@ function royale_news_customize_register( $wp_customize ) {
 	require_once trailingslashit( get_template_directory() ) . '/themebeez/customizer/options.php';
 
 	// Upspell
-	require_once trailingslashit( get_template_directory() ) . '/themebeez/upgrade-to-pro/upgrade.php';
+	require_once trailingslashit( get_template_directory() ) . '/themebeez/customizer/upsell.php';
 
 	$wp_customize->register_section_type( 'Royale_News_Customize_Section_Upsell' );
 
@@ -79,7 +79,7 @@ function royale_news_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function royale_news_customize_preview_js() {
-	wp_enqueue_script( 'royale-news-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+	wp_enqueue_script( 'royale-news-customizer', get_template_directory_uri() . '/themebeez/customizer/assets/js/customizer.js', array( 'customize-preview' ), ROYALE_NEWS_VERSION, true );
 }
 add_action( 'customize_preview_init', 'royale_news_customize_preview_js' );
 
@@ -89,16 +89,12 @@ add_action( 'customize_preview_init', 'royale_news_customize_preview_js' );
 function royale_news_customizer_js() {
      
 
-    wp_enqueue_style( 'chosen', get_template_directory_uri() .'/themebeez/assets/admin/css/chosen.css' );
+    wp_enqueue_style( 'chosen', get_template_directory_uri() .'/themebeez/customizer/assets/css/chosen.css' );
 
-    wp_enqueue_style( 'royale-news-upgrade', get_template_directory_uri() . '/themebeez/upgrade-to-pro/upgrade.css');
-
-    wp_enqueue_style( 'royale-news-admin', get_template_directory_uri() . '/themebeez/assets/admin/css/admin.css');
-
-    wp_enqueue_script('royale-news-upgrade', get_template_directory_uri() . '/themebeez/upgrade-to-pro/upgrade.js', array('jquery'), '20151215', true);
+    wp_enqueue_style( 'royale-news-customizer-style', get_template_directory_uri() . '/themebeez/customizer/assets/css/customizer-style.css');
     
-    wp_enqueue_script( 'chosen', get_template_directory_uri() .'/themebeez/assets/admin/js/chosen.js', array('jquery'),'1.8.3', true  );   
+    wp_enqueue_script( 'chosen', get_template_directory_uri() .'/themebeez/customizer/assets/js/chosen.js', array('jquery'), ROYALE_NEWS_VERSION, true  );   
 
-	wp_enqueue_script( 'royale-news-admin', get_template_directory_uri() .'/themebeez/assets/admin/js/admin.js', array('jquery'),'1.0.0', true  );  
+	wp_enqueue_script( 'royale-news-customizer-script', get_template_directory_uri() .'/themebeez/customizer/assets/js/customizer-script.js', array('jquery'), ROYALE_NEWS_VERSION, true  );  
 }
 add_action( 'customize_controls_enqueue_scripts', 'royale_news_customizer_js' );

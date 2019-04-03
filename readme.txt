@@ -1,12 +1,12 @@
 === Royale News ===
 
 Contributors: themebeez
+Requires PHP: 4.6
 Requires at least: 4.8
-Tested up to: 4.9.8
-Stable tag: 1.1.3
+Tested up to: 5.1.1
+Stable tag: 2.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, news, two-columns, three-columns, theme-options, translation-ready, footer-widgets
 
 A starter theme called Royale News.
@@ -17,7 +17,7 @@ Royale News is best magazine WordPress theme if you are looking for clean, minim
 
 == Copyright ==
 
-Royale News WordPress Theme, Copyright (C) 2017, themebeez
+Royale News WordPress Theme, Copyright (C) 2019, themebeez
 Royale News is distributed under the terms of the GNU GPL
 
 == Credits ==
@@ -78,6 +78,17 @@ Royale News includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+== 2.0.0 - April 5, 2019 ==
+
+* Updated Owlcarousel Js
+* Fixed carousel issue for featured widget with slider
+* Removed unused files and folders
+* Removed unused functions
+* Removed links for google plus
+* Customizer issues fixed
+* Screenshot has been changed
+* CSS fixes
+
 
 == 1.1.3 - November 12, 2018 ==
 
@@ -94,6 +105,7 @@ Royale News includes support for Infinite Scroll in Jetpack.
 
 * Option for excerpt length added in customizer.
 * Some minor fixes.
+
 
 = 1.1.1 - Apr 15, 2018
 
