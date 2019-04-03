@@ -46,28 +46,28 @@ if( ! class_exists( 'Royale_News_Main_Featured_Posts' ) ) :
 							$thumbnail_image = '';
 							if( has_post_thumbnail() ) {
 
-								$thumbnail_image = get_the_post_thumbnail_url( get_the_ID(), 'royale-news-thumbnail-3' );
+								$thumbnail_image = get_the_post_thumbnail_url( get_the_ID(), 'royale-news-thumbnail-4' );
 							} else {
 
 								$thumbnail_image = get_template_directory_uri() . '/assets/images/image-1.jpg';
 							}
 							?>
-							<a href="<?php the_permalink(); ?>">
-								<div class="highlight-left" style="background-image: url( <?php echo esc_url( $thumbnail_image ); ?> );">								
+							<div class="highlight-left" style="background-image: url( <?php echo esc_url( $thumbnail_image ); ?> );">								
+								<a href="<?php the_permalink(); ?>">
 									<div class="mask"></div><!-- .mask -->
-									<?php royale_news_get_categories(); ?>
-									<div class="highlight-info">
-										<h3 class="news-title">
-											<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-										</h3><!-- .news-title -->
-										<div class="entry-meta">
-						                    <?php royale_news_get_date(); ?> 
-								            <?php royale_news_get_author(); ?>
-											<?php royale_news_get_comments_no(); ?>         
-						                </div><!-- .entry-meta -->
-									</div><!-- .highlight-info -->
-								</div><!-- .highlight-left -->
-							</a>
+								</a>
+								<?php royale_news_get_categories(); ?>
+								<div class="highlight-info">
+									<h3 class="news-title">
+										<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+									</h3><!-- .news-title -->
+									<div class="entry-meta">
+					                    <?php royale_news_get_date(); ?> 
+							            <?php royale_news_get_author(); ?>
+										<?php royale_news_get_comments_no(); ?>         
+					                </div><!-- .entry-meta -->
+								</div><!-- .highlight-info -->
+							</div><!-- .highlight-left -->
 						</div><!-- .gutter-right -->
 						<?php
 					endwhile;
@@ -99,22 +99,22 @@ if( ! class_exists( 'Royale_News_Main_Featured_Posts' ) ) :
 								$thumbnail_image = get_template_directory_uri() . '/assets/images/image-2.jpg';
 							}
 							?>
-							<a href="<?php the_permalink(); ?>">
-								<div class="highlight-right highlight-right-top" style="background-image: url( <?php echo esc_url( $thumbnail_image ); ?> );">
+							<div class="highlight-right highlight-right-top" style="background-image: url( <?php echo esc_url( $thumbnail_image ); ?> );">
+								<a href="<?php the_permalink(); ?>">
 									<div class="mask"></div><!-- .mask -->
-									<?php royale_news_get_categories(); ?>
-									<div class="highlight-info">
-										<h4 class="news-title">
-											<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-										</h4><!-- .news-title -->
-										<div class="entry-meta">
-											<?php royale_news_get_date(); ?> 
-								            <?php royale_news_get_author(); ?>
-											<?php royale_news_get_comments_no(); ?>   
-						                </div><!-- .entry-meta -->
-									</div><!-- .highlight-info -->
-								</div><!-- .highlight-right.highlight-right-top -->
-							</a>
+								</a>
+								<?php royale_news_get_categories(); ?>
+								<div class="highlight-info">
+									<h4 class="news-title">
+										<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+									</h4><!-- .news-title -->
+									<div class="entry-meta">
+										<?php royale_news_get_date(); ?> 
+							            <?php royale_news_get_author(); ?>
+										<?php royale_news_get_comments_no(); ?>   
+					                </div><!-- .entry-meta -->
+								</div><!-- .highlight-info -->
+							</div><!-- .highlight-right.highlight-right-top -->
 							<?php
 						endwhile;
 						wp_reset_postdata();
@@ -143,22 +143,22 @@ if( ! class_exists( 'Royale_News_Main_Featured_Posts' ) ) :
 								$thumbnail_image = get_template_directory_uri() . '/assets/images/image-2.jpg';
 							}
 							?>
-							<a href="<?php the_permalink(); ?>">
-								<div class="highlight-right highlight-right-bottom" style="background-image: url( <?php echo esc_url( $thumbnail_image ); ?> );">									
+							<div class="highlight-right highlight-right-bottom" style="background-image: url( <?php echo esc_url( $thumbnail_image ); ?> );">									
+								<a href="<?php the_permalink(); ?>">
 									<div class="mask"></div><!-- .mask -->
-									<?php royale_news_get_categories(); ?>
-									<div class="highlight-info">
-										<h4 class="news-title">
-											<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-										</h4><!-- .news-title -->
-										<div class="entry-meta">
-						                    <?php royale_news_get_date(); ?> 
-								            <?php royale_news_get_author(); ?>
-											<?php royale_news_get_comments_no(); ?>        
-						                </div><!-- .entry-meta -->
-									</div><!-- .highlight-info -->
-								</div><!-- .highlight-right.highlight-right-bottom -->
-							</a>
+								</a>
+								<?php royale_news_get_categories(); ?>
+								<div class="highlight-info">
+									<h4 class="news-title">
+										<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+									</h4><!-- .news-title -->
+									<div class="entry-meta">
+					                    <?php royale_news_get_date(); ?> 
+							            <?php royale_news_get_author(); ?>
+										<?php royale_news_get_comments_no(); ?>        
+					                </div><!-- .entry-meta -->
+								</div><!-- .highlight-info -->
+							</div><!-- .highlight-right.highlight-right-bottom -->
 							<?php
 						endwhile;
 						wp_reset_postdata();
@@ -290,22 +290,22 @@ if( ! class_exists( 'Royale_News_Slider_Featured_Posts' ) ) :
 								}
 								?>
 								<div class="item">
-									<a href="<?php the_permalink(); ?>">
-										<div class="news-highlight-content" style="background-image: url( <?php echo esc_url( $thumbnail_image ); ?> );">
+									<div class="news-highlight-content" style="background-image: url( <?php echo esc_url( $thumbnail_image ); ?> );">
+										<a href="<?php the_permalink(); ?>">
 											<div class="mask"></div><!-- .mask -->
-											<?php royale_news_get_categories(); ?>
-											<div class="highlight-info">
-												<h3 class="news-title">
-													<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-												</h3><!-- .news-title -->
-												<div class="entry-meta">
-								                    <?php royale_news_get_date(); ?> 
-										            <?php royale_news_get_author(); ?>
-													<?php royale_news_get_comments_no(); ?>        
-								                </div><!-- .entry-meta -->
-											</div><!-- .highlight-info -->
-										</div><!-- .news-highlight-content -->		
-									</a>				
+										</a>
+										<?php royale_news_get_categories(); ?>
+										<div class="highlight-info">
+											<h3 class="news-title">
+												<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+											</h3><!-- .news-title -->
+											<div class="entry-meta">
+							                    <?php royale_news_get_date(); ?> 
+									            <?php royale_news_get_author(); ?>
+												<?php royale_news_get_comments_no(); ?>        
+							                </div><!-- .entry-meta -->
+										</div><!-- .highlight-info -->
+									</div><!-- .news-highlight-content -->
 								</div><!-- .item -->
 								<?php
 							endwhile;
@@ -464,30 +464,30 @@ if( ! class_exists( 'Royale_News_Main_Featured_Posts_Two' ) ) :
 							$thumbnail_image = '';
 							if( has_post_thumbnail() ) {
 
-								$thumbnail_image = get_the_post_thumbnail_url( get_the_ID(), 'royale-news-thumbnail-2' );
+								$thumbnail_image = get_the_post_thumbnail_url( get_the_ID(), 'royale-news-thumbnail-4' );
 							} else {
 
 								$thumbnail_image = get_template_directory_uri() . '/assets/images/image-2.jpg';
 							}
 							?>
-							<a href="<?php the_permalink(); ?>">
-								<div class="highlight-right highlight-right-top" style="background-image: url( <?php echo esc_url( $thumbnail_image ); ?> );">
+							<div class="highlight-right highlight-right-top" style="background-image: url( <?php echo esc_url( $thumbnail_image ); ?> );">
+								<a href="<?php the_permalink(); ?>">
 									<div class="mask"></div><!-- .mask -->
-									<?php royale_news_get_categories(); ?>
-									<div class="highlight-info">
-										<h4 class="news-title">
-											<a href="<?php the_permalink(); ?>">
-												<?php the_title(); ?>
-											</a>
-										</h4><!-- .news-title -->
-										<div class="entry-meta">
-											<?php royale_news_get_date(); ?> 
-								            <?php royale_news_get_author(); ?>
-											<?php royale_news_get_comments_no(); ?>     
-						                </div><!-- .entry-meta -->
-									</div><!-- .highlight-info -->
-								</div><!-- .highlight-right.highlight-right-top -->
-							</a>
+								</a>
+								<?php royale_news_get_categories(); ?>
+								<div class="highlight-info">
+									<h4 class="news-title">
+										<a href="<?php the_permalink(); ?>">
+											<?php the_title(); ?>
+										</a>
+									</h4><!-- .news-title -->
+									<div class="entry-meta">
+										<?php royale_news_get_date(); ?> 
+							            <?php royale_news_get_author(); ?>
+										<?php royale_news_get_comments_no(); ?>     
+					                </div><!-- .entry-meta -->
+								</div><!-- .highlight-info -->
+							</div><!-- .highlight-right.highlight-right-top -->
 						<?php
 						endwhile;
 						wp_reset_postdata();
@@ -515,22 +515,22 @@ if( ! class_exists( 'Royale_News_Main_Featured_Posts_Two' ) ) :
 								$thumbnail_image = get_template_directory_uri() . '/assets/images/image-2.jpg';
 							}
 							?>
-							<a href="<?php the_permalink(); ?>">
-								<div class="highlight-right highlight-right-bottom" style="background-image: url( <?php echo esc_url( $thumbnail_image ); ?> );">
+							<div class="highlight-right highlight-right-bottom" style="background-image: url( <?php echo esc_url( $thumbnail_image ); ?> );">
+								<a href="<?php the_permalink(); ?>">
 									<div class="mask"></div><!-- .mask -->
-									<?php royale_news_get_categories(); ?>
-									<div class="highlight-info">
-										<h4 class="news-title">
-											<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-										</h4><!-- .news-title -->
-										<div class="entry-meta">
-						                    <?php royale_news_get_date(); ?> 
-								            <?php royale_news_get_author(); ?>
-											<?php royale_news_get_comments_no(); ?>      
-						                </div><!-- .entry-meta -->
-									</div><!-- .highlight-info -->
-								</div><!-- .highlight-right.highlight-right-bottom -->
-							</a>
+								</a>
+								<?php royale_news_get_categories(); ?>
+								<div class="highlight-info">
+									<h4 class="news-title">
+										<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+									</h4><!-- .news-title -->
+									<div class="entry-meta">
+					                    <?php royale_news_get_date(); ?> 
+							            <?php royale_news_get_author(); ?>
+										<?php royale_news_get_comments_no(); ?>      
+					                </div><!-- .entry-meta -->
+								</div><!-- .highlight-info -->
+							</div><!-- .highlight-right.highlight-right-bottom -->
 							<?php
 						endwhile;
 						wp_reset_postdata();

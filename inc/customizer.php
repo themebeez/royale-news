@@ -48,7 +48,7 @@ function royale_news_customize_register( $wp_customize ) {
 			array(
 				'title'    => esc_html__( 'Royale News Pro', 'royale-news' ),
 				'pro_text' => esc_html__( 'Upgrade to Pro', 'royale-news' ),
-				'pro_url'  => 'https://themebeez.com/themes/royale-news/',
+				'pro_url'  => 'https://themebeez.com/themes/royale-news-pro/',
 				'priority' => 1,
 			)
 		)

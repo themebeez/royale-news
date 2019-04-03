@@ -63,8 +63,6 @@ a:active {
 }
 
 
-
-
 .top-header {
 
     background-color: rgba(0, 0, 0, 1);
@@ -102,6 +100,9 @@ a:active {
 .ticker-news a {
 
     color: rgba(255, 255, 255, 1);
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .current-date-container,
@@ -231,6 +232,8 @@ a:active {
     
     margin-right: 15px;
 }
+
+
 /*
 *************************************************************
 *
@@ -260,6 +263,9 @@ a:active {
     margin-bottom: 0px;
 }
 
+.header-ad {
+    text-align: right;
+}
 
 
 /*
@@ -514,24 +520,22 @@ a:active {
 */
 
 
-
-
 .highlight-section .no-gutter {
+
     padding: 0px;
 }
 
 .highlight-carousel .news-highlight-content {
+
     position: relative;
+    height:450px;
+    background-size: cover;
+    background-position:center center;
 }
 
-.highlight-carousel .owl-item img {
-    width: auto;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
 
 .highlight-carousel .news-highlight-content .cat-links {
+
     position: absolute;
     left: 20px;
     top: 20px;
@@ -540,6 +544,7 @@ a:active {
 
 
 .highlight-carousel .news-highlight-content .highlight-info {
+
     position: absolute;
     left: 20px;
     bottom: 20px;
@@ -564,6 +569,7 @@ a:active {
     background-color: rgba(0, 0, 0, 0);
     transition-duration: .6s;
 }
+
 
 @media ( min-width: 991px) {
 
@@ -1319,8 +1325,18 @@ a:active {
     margin-top: 30px;
 }
 
+.footer .copyright-text a {
+
+    color:$secondary_color;
+}
+
+.footer .copyright-text a:hover {
+
+    color:$white;
+}
 
 .footer-menu {
+    
     margin-bottom: 0px;
     margin-top: 10px;
 }
@@ -1930,20 +1946,36 @@ b.fn {
 */
 
 
+.highlight-left,
+.highlight-left .highlight-fimg,
+.highlight-right {
+
+    height:450px;
+    background-size:cover;
+    background-position:center center;
+}
+
+.highlight-right {
+
+    height:220px;
+}
 
 .highlight-left-carousel {
+
     position: relative;
 }
 
 .highlight-left-carousel .owl-nav {
+
     position: absolute;
     top: 20px;
     right: 20px;
     font-size: 0px;
 }
 
-.highlight-left-carousel .owl-nav .owl-prev,
-.highlight-left-carousel .owl-nav .owl-next {
+.highlight-left-carousel.owl-carousel .owl-nav button.owl-next,
+.highlight-left-carousel.owl-carousel .owl-nav button.owl-prev {
+
     width: 35px;
     height: 35px;
     background-color: rgba(255, 255, 255, 1);
@@ -1961,15 +1993,13 @@ b.fn {
 }
 
 .highlight-left-carousel .owl-nav .owl-next::after {
+
     content: '\f105';
     font-family: 'FontAwesome';
     font-size: 24px;
     line-height: 14px;
 }
 
-.highlight-left:hover .highlight-fimg img {
-    transform: none;
-}
 
 
 
@@ -1999,7 +2029,7 @@ b.fn {
 /*
 *************************************************************
 *
-*  Media query for mobile device
+*  Media query later added
 *
 *************************************************************
 */
@@ -2021,3 +2051,62 @@ b.fn {
         padding: 10px 0 0;
     }
 }
+
+@media ( max-width:1100px ) {
+
+    .highlight-left, 
+    .highlight-left .highlight-fimg {
+
+        height:400px;
+    }
+
+    .highlight-right {
+
+        height:195px;
+    }
+}
+
+@media ( max-width:991px ) {
+
+    .highlight-left, 
+    .highlight-left .highlight-fimg {
+
+        height:350px;
+    }
+
+    .highlight-right {
+
+        height:220px;
+    }
+
+    .highlight-section .gutter-right {
+
+        padding-right:15px;
+    }
+
+    .highlight-section .gutter-left {
+
+        padding-left: 15px;
+    }
+
+    .highlight-carousel .news-highlight-content {
+
+        height:400px;
+    }
+}
+
+@media ( max-width:767px ) {
+
+
+    .highlight-right {
+
+        height:250px;
+    }
+
+    .highlight-carousel .news-highlight-content {
+
+        height:350px;
+    }
+
+
+} 
