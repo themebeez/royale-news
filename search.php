@@ -14,31 +14,32 @@ get_header();
 			<div class="container">
 				<div class="row section">
 					<?php
-						$sidebar_position = royale_news_get_option( 'royale_news_sidebar_position' );
-						if( $sidebar_position == 'none' || !is_active_sidebar( 'sidebar-1' ) ) :
-							$class = 'col-md-12';
-						else :
-							$class = 'col-md-8';
-						endif;
-						if( $sidebar_position == 'left' ) :
-							get_sidebar();
-						endif;
+					$sidebar_position = royale_news_get_option( 'royale_news_sidebar_position' );
+
+					if( $sidebar_position == 'none' || !is_active_sidebar( 'sidebar-1' ) ) {
+						$class = 'col-md-12';
+					} else {
+						$class = 'col-md-8';
+					}
+
+					if( $sidebar_position == 'left' ) {
+						get_sidebar();
+					}
 					?>
 					<div class="<?php echo esc_attr( $class ); ?> sticky-section">
 						<div class="row clearfix news-section">
 							<div class="col-md-12">
-							<?php
-								if( have_posts() ) :
-							?>
-									<div class="news-section-info clearfix">
-										<h3 class="section-title">
-											<?php
-												/* translators: %s: search query. */
-												printf( esc_html__( 'Search Results for: %s', 'royale-news' ), '<span>' . get_search_query() . '</span>' );
-											?>
-										</h3><!-- .section-title -->
-									</div><!-- .news-section-info -->
+								<div class="news-section-info clearfix">
+									<h3 class="section-title">
+										<?php
+										/* translators: %s: search query. */
+										printf( esc_html__( 'Search Results for: %s', 'royale-news' ), '<span>' . get_search_query() . '</span>' );
+										?>
+									</h3><!-- .section-title -->
+								</div><!-- .news-section-info -->
 								<?php
+								if( have_posts() ) {
+
 									/* Start the Loop */
 									while ( have_posts() ) : the_post();
 
@@ -50,27 +51,26 @@ get_header();
 										get_template_part( 'template-parts/content', 'search' );
 
 									endwhile;
-								else :
+								} else {
 
-									get_template_part( 'template-parts/content', 'none' );
-								
-								endif;
-							?>
+									get_template_part( 'template-parts/content', 'none' );								
+								}
+								?>
 							</div>
 							<?php
-								/**
-								* Hook - royale_news_pagination.
-								*
-								* @hooked royale_news_pagination_action - 10
-								*/
-								do_action( 'royale_news_pagination' );
+							/**
+							* Hook - royale_news_pagination.
+							*
+							* @hooked royale_news_pagination_action - 10
+							*/
+							do_action( 'royale_news_pagination' );
 							?>
 						</div><!-- .row.clearfix.news-section -->
 					</div>
 					<?php
-						if( $sidebar_position == 'right' ) :
-							get_sidebar();
-						endif;
+					if( $sidebar_position == 'right' ) {
+						get_sidebar();
+					}
 					?>
 				</div><!-- .row.section -->
 			</div><!-- .container -->

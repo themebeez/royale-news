@@ -81,7 +81,7 @@ if ( ! class_exists( 'Royale_News_Widget_Layout_One' ) ) :
 														the_post_thumbnail( 'royale-news-thumbnail-3', array( 'class' => 'img-responsive' ) );
 													else :
 														?>
-														<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/image-1.jpg' ); ?>" class="img-responsive">
+														<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/image-1.jpg' ); ?>" class="img-responsive" alt="<?php the_title_attribute(); ?>">
 														<?php
 													endif;
 													?>
@@ -136,7 +136,7 @@ if ( ! class_exists( 'Royale_News_Widget_Layout_One' ) ) :
 														the_post_thumbnail( 'royale-news-thumbnail-1', array( 'class' => 'img-responsive' ) );
 													else :
 														?>
-														<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/image-3.jpg' ); ?>" class="img-responsive">
+														<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/image-3.jpg' ); ?>" class="img-responsive" alt="<?php the_title_attribute(); ?>">
 														<?php
 													endif;
 													?>
@@ -291,7 +291,7 @@ if ( ! class_exists( 'Royale_News_Widget_Layout_Two' ) ) :
 														the_post_thumbnail( 'royale-news-thumbnail-3', array( 'class' => 'img-responsive' ) );
 													else :
 														?>
-														<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/image-1.jpg' ); ?>" class="img-responsive">
+														<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/image-1.jpg' ); ?>" class="img-responsive" alt="<?php the_title_attribute(); ?>">
 														<?php
 													endif;
 													?>
@@ -339,7 +339,7 @@ if ( ! class_exists( 'Royale_News_Widget_Layout_Two' ) ) :
 																the_post_thumbnail( 'royale-news-thumbnail-1', array( 'class' => 'img-responsive' ) );
 															else :
 																?>
-																<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/image-3.jpg' ); ?>" class="img-responsive">
+																<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/image-3.jpg' ); ?>" class="img-responsive" alt="<?php the_title_attribute(); ?>">
 																<?php
 															endif;
 															?>

@@ -10,8 +10,8 @@
 ?>
 
 <section class="no-results not-found">
-	<header class="news-section-info clearfix">
-		<h3 class="page-title section-title"><?php esc_html_e( 'Nothing Found', 'royale-news' ); ?></h3>
+	<header class="none-section-info clearfix">
+		<h3 class="none-title"><?php esc_html_e( 'Nothing Found', 'royale-news' ); ?></h3>
 	</header><!-- .page-header -->
 
 	<div class="page-content">

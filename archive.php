@@ -7,7 +7,7 @@
  * @package Royale_News
  */
 
-	get_header(); 
+get_header(); 
 	?>
 	<div id="primary" class="content-area <?php royale_news_inner_container_class(); ?>">
 		<main id="main" class="site-main">
@@ -15,26 +15,29 @@
 				<div class="row">
 					<?php
 					$sidebar_position = royale_news_get_option( 'royale_news_sidebar_position' );
-					if( $sidebar_position == 'none' || !is_active_sidebar( 'sidebar-1' ) ) :
+					
+					if( $sidebar_position == 'none' || !is_active_sidebar( 'sidebar-1' ) ) {
 						$class = 'col-md-12';
-					else :
+					} else {
 						$class = 'col-md-8';
-					endif;
+					}
 
-					if( $sidebar_position == 'left' ) :
+					if( $sidebar_position == 'left' ) {
 						get_sidebar();
-					endif;
+					}
 					?>
 					<div class="<?php echo esc_attr( $class ); ?> sticky-section">
 						<div class="row clearfix news-section news-section-three">
 							<div class="col-md-12">
+								<div class="news-section-info clearfix">
+									<?php the_archive_title( '<h3 class="section-title">', '</h3>' ); ?>									
+								</div><!-- .news-section-info -->
+								<div class="archive-description news-section">
+									<?php the_archive_description( '<p>', '</p>' ); ?>
+								</div><!-- .archive-description -->
 								<?php
-								if( have_posts() ) :
-									?>
-									<div class="news-section-info clearfix">
-										<?php the_archive_title( '<h3 class="section-title">', '</h3>' ); ?>
-									</div><!-- .news-section-info -->
-									<?php
+								if( have_posts() ) {
+									
 									/* Start the Loop */
 									while ( have_posts() ) : the_post();
 
@@ -46,7 +49,11 @@
 										get_template_part( 'template-parts/content', get_post_format() );
 
 									endwhile;
-								endif;
+
+								} else {
+
+									get_template_part( 'template-parts/content', 'none' );
+								}
 								?>
 							</div>
 							<?php
@@ -60,9 +67,9 @@
 						</div><!--.row.clearfix.news-section.news-section-three-->
 					</div>
 					<?php
-					if( $sidebar_position == 'right' ) :
+					if( $sidebar_position == 'right' ) {
 						get_sidebar();
-					endif;
+					}
 					?>
 				</div><!-- .row.section -->
 			</div><!-- .container -->

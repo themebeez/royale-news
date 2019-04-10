@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Royale News 2.0.0\n"
+"Project-Id-Version: Royale News 2.0.1\n"
 "Report-Msgid-Bugs-To: https://themebeez.com/support\n"
-"POT-Creation-Date: 2019-04-03 09:13:26+00:00\n"
+"POT-Creation-Date: 2019-04-10 05:25:47+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,7 +30,7 @@ msgstr ""
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:27
+#: 404.php:26
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the "
 "links below or a search?"
@@ -133,12 +133,12 @@ msgstr ""
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#: inc/template-tags.php:114 template-parts/content-page.php:49
+#: inc/template-tags.php:114 template-parts/content-page.php:45
 #. translators: %s: Name of current post. Only visible to screen readers
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
-#: search.php:37
+#: search.php:36
 #. translators: %s: search query.
 msgid "Search Results for: %s"
 msgstr ""
@@ -164,7 +164,7 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:37 template-parts/content-single.php:48
+#: template-parts/content-page.php:31 template-parts/content-single.php:47
 msgid "Pages:"
 msgstr ""
 
@@ -172,7 +172,7 @@ msgstr ""
 msgid "Read More"
 msgstr ""
 
-#: template-parts/content-single.php:37
+#: template-parts/content-single.php:36
 #. translators: %s: Name of current post. Only visible to screen readers
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""

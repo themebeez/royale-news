@@ -23,13 +23,8 @@ get_header();
 		                            </header><!-- .page-header -->
 
 		                            <div class="page-content">
-		                                <p>
-		                                	<?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'royale-news' ); ?>
-		                                </p>
-
-		                                <?php
-		                                	get_search_form();
-		                                ?>
+		                                <p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'royale-news' ); ?></p>
+		                                <?php get_search_form(); ?>
 		                            </div><!-- .page-content -->
 		                        </div><!-- .error-404.not-found -->
 							</div>
