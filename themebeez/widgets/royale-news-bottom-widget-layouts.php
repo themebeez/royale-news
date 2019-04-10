@@ -65,7 +65,7 @@ if ( ! class_exists( 'Royale_News_Bottom_Widget_Layout_One' ) ) :
 									<?php
 								endif;
 								?>
-								<div class="col-md-4 col-sm-6 col-xs-6">
+								<div class="col-md-4 col-sm-6">
 									<div class="clearfix small-news-content">
 										<div class="small-thumbnail">
 											<a href="<?php the_permalink(); ?>">
