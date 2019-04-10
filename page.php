@@ -19,37 +19,38 @@ get_header();
 			<div class="container">
 				<div class="row">
 					<?php
-						$sidebar_position = royale_news_get_option( 'royale_news_sidebar_position' );
-						if( $sidebar_position == 'none' || !is_active_sidebar( 'sidebar-1' ) ) :
-							$class = 'col-md-12';
-						else :
-							$class = 'col-md-8';
-						endif;
-						if( $sidebar_position == 'left' ) :
-							get_sidebar();
-						endif;
+					$sidebar_position = royale_news_get_option( 'royale_news_sidebar_position' );
+
+					if( $sidebar_position == 'none' || !is_active_sidebar( 'sidebar-1' ) ) {
+						$class = 'col-md-12';
+					} else {
+						$class = 'col-md-8';
+					}
+
+					if( $sidebar_position == 'left' ) {
+						get_sidebar();
+					}
 					?>
 					<div class="<?php echo esc_attr( $class ); ?> sticky-section">
 						<div class="row">
 							<?php
-								while ( have_posts() ) : the_post();
+							while ( have_posts() ) : the_post();
 
-									get_template_part( 'template-parts/content', 'page' );
+								get_template_part( 'template-parts/content', 'page' );
 
-									// If comments are open or we have at least one comment, load up the comment template.
-									if ( comments_open() || get_comments_number() ) :
-										comments_template();
-									endif;
+								// If comments are open or we have at least one comment, load up the comment template.
+								if ( comments_open() || get_comments_number() ) :
+									comments_template();
+								endif;
 
-								endwhile; // End of the loop.
-
+							endwhile; // End of the loop.
 							?>
 						</div><!-- .row.clearfix.news-section -->
 					</div>
 					<?php
-						if( $sidebar_position == 'right' ) :
-							get_sidebar();
-						endif;
+					if( $sidebar_position == 'right' ) {
+						get_sidebar();
+					}
 					?>
 				</div><!-- .row.section -->
 			</div><!-- .container -->

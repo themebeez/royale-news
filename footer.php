@@ -71,6 +71,5 @@
 	* @hooked royale_news_footer_action - 10
 	*/
 	do_action( 'royale_news_footer' );
-?>
 
 	

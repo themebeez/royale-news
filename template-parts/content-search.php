@@ -14,13 +14,13 @@
 			<div class="news-image">
 				<a href="<?php the_permalink(); ?>">
 					<?php
-					if( has_post_thumbnail() ) :
-						the_post_thumbnail( 'royale-news-thumbnail-2', array( 'class' => 'img-responsive' ) );
-					else :
+					if( has_post_thumbnail() ) {
+						the_post_thumbnail( 'royale-news-thumbnail-2', array( 'class' => 'img-responsive', 'alt' => the_title_attribute( array( 'echo' => false ) ) ) );
+					} else {
 						?>
-						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/image-1.jpg' ); ?>" class="img-responsive">
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/image-1.jpg' ); ?>" class="img-responsive" alt="<?php the_title_attribute(); ?>">
 						<?php
-					endif;
+					}
 					?>
 					<div class="mask"></div>
 				</a>

@@ -14,7 +14,7 @@ if ( ! class_exists( 'Royale_News_Sidebar_Widget_One' ) ) :
 		function __construct() {
 
 			$opts = array(
-				'classname' => 'recent-posts',
+				'classname' => 'royale-news-recent-posts recent-posts',
 				'description'	=> esc_html__( 'Displays posts. Place it in "Sidebar" or "Footer Widget Area".', 'royale-news' )
 			);
 
@@ -61,7 +61,7 @@ if ( ! class_exists( 'Royale_News_Sidebar_Widget_One' ) ) :
 													the_post_thumbnail( 'royale-news-thumbnail-1', array( 'class' => 'img-responsive' ) );
 												else :
 								                    ?>
-												    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/image-3.jpg' ); ?>" class="img-responsive">
+												    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/image-3.jpg' ); ?>" class="img-responsive" alt="<?php the_title_attribute(); ?>">
 								                    <?php
 												endif;
 								                ?>
@@ -148,7 +148,7 @@ if( ! class_exists( 'Royale_News_Sidebar_Widget_Two' ) ) :
         function __construct() {
 
             $opts = array(
-                'classname'   => '',
+                'classname'   => 'royale-news-social-widget',
                 'description' => esc_html__( 'Social Links Widget. Place it in "Sidebar".', 'royale-news' ),
             );
 

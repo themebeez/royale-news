@@ -10,23 +10,22 @@
 ?>
 <div class="col-md-12">
 	<div class="news-section-info clearfix">
-		<h3 class="section-title">
-			<?php the_title(); ?>
-		</h3><!-- .section-title -->
+		<h3 class="section-title"><?php the_title(); ?></h3><!-- .section-title -->
 	</div><!-- .news-section-info -->
 	<div class="single-news-content">
 		<?php
-		if( has_post_thumbnail() ) :
+		if( has_post_thumbnail() ) {
 			?>
 			<div class="news-image">
-				<?php the_post_thumbnail( 'full', array( 'class' => 'img-responsive' ) ); ?>
+				<?php the_post_thumbnail( 'full', array( 'class' => 'img-responsive', 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
 			</div><!-- .news-image -->
 			<?php
-		endif;
+		}
 		?>
 		<div class="news-detail clearfix">
 			<div class="entry-meta">  
 				<?php royale_news_get_date(); ?>
+				<?php royale_news_get_author(); ?>
 				<?php royale_news_get_categories(); ?>				
 			</div><!-- .entry-meta -->
 			<div class="news-content editor-content-entry">

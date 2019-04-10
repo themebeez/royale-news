@@ -91,5 +91,4 @@ if ( ! function_exists( 'royale_news_get_default_theme_options' ) ) :
 
 		return $defaults;
 	}
-
 endif;
