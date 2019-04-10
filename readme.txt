@@ -81,7 +81,7 @@ Royale News includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
-== 2.0.0 - April 5, 2019 ==
+== 2.0.0 - April 7, 2019 ==
 
 * Updated Owlcarousel Js
 * Fixed carousel issue for featured widget with slider
