@@ -46,10 +46,11 @@ get_header(); ?>
 					?>
 					<div class="<?php echo esc_attr( $class ); ?> sticky-section">
 						<div class="row">
-							<div class="col-md-12">
-								<?php
-								if( have_posts() ) {
-									
+							<?php
+							if( have_posts() ) {
+								?>
+								<div class="col-md-12">
+									<?php
 									/* Start the Loop */
 									while ( have_posts() ) : the_post();
 
@@ -61,19 +62,23 @@ get_header(); ?>
 										get_template_part( 'template-parts/content', get_post_format() );
 
 									endwhile;
-								} else {
-
-									get_template_part( 'template-parts/content', 'none' );
-								}
+									}
+									?>
+								</div><!-- .col-md-12 -->
+								<?php
+								/**
+								* Hook - royale_news_pagination.
+								*
+								* @hooked royale_news_pagination_action - 10
+								*/
+								do_action( 'royale_news_pagination' );
+							} else {
 								?>
-							</div><!-- .col-md-12 -->
-							<?php
-							/**
-							* Hook - royale_news_pagination.
-							*
-							* @hooked royale_news_pagination_action - 10
-							*/
-							do_action( 'royale_news_pagination' );
+								<div class="col-md-12">
+									<?php get_template_part( 'template-parts/content', 'none' ); ?>
+								</div>
+								<?php
+							}
 							?>
 						</div><!-- .row.clearfix.news-section -->
 					</div><!-- .esc_attr( $class ) -->
