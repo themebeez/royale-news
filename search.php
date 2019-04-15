@@ -8,6 +8,13 @@
  */
 
 get_header(); 
+	
+	/**
+	* Hook - royale_news_breadcrumb.
+	*
+	* @hooked royale_news_breadcrumb_action - 10
+	*/
+	do_action( 'royale_news_breadcrumb' );
 	?>
 	<div id="primary" class="content-area <?php royale_news_inner_container_class(); ?>">
 		<main id="main" class="site-main">
@@ -37,24 +44,24 @@ get_header();
 										?>
 									</h3><!-- .section-title -->
 								</div><!-- .news-section-info -->
+							</div>
+							<?php
+							if( have_posts() ) {
+								?>
+								<div class="col-md-12">
 								<?php
-								if( have_posts() ) {
 
-									/* Start the Loop */
-									while ( have_posts() ) : the_post();
+								/* Start the Loop */
+								while ( have_posts() ) : the_post();
 
-										/**
-										 * Run the loop for the search to output the results.
-										 * If you want to overload this in a child theme then include a file
-										 * called content-search.php and that will be used instead.
-										 */
-										get_template_part( 'template-parts/content', 'search' );
+									/**
+									 * Run the loop for the search to output the results.
+									 * If you want to overload this in a child theme then include a file
+									 * called content-search.php and that will be used instead.
+									 */
+									get_template_part( 'template-parts/content', 'search' );
 
-									endwhile;
-								} else {
-
-									get_template_part( 'template-parts/content', 'none' );								
-								}
+								endwhile;
 								?>
 							</div>
 							<?php
@@ -64,7 +71,14 @@ get_header();
 							* @hooked royale_news_pagination_action - 10
 							*/
 							do_action( 'royale_news_pagination' );
+						} else {
 							?>
+							<div class="col-md-12">
+								<?php get_template_part( 'template-parts/content', 'none' ); ?>
+							</div>
+							<?php
+						}
+						?>
 						</div><!-- .row.clearfix.news-section -->
 					</div>
 					<?php
