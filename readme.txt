@@ -3,8 +3,8 @@
 Contributors: themebeez
 Requires PHP: 5.6
 Requires at least: 4.8
-Tested up to: 5.1.1
-Stable tag: 2.0.3
+Tested up to: 5.2
+Stable tag: 2.0.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, news, two-columns, three-columns, theme-options, translation-ready, footer-widgets
@@ -80,6 +80,11 @@ Royale News includes support for Infinite Scroll in Jetpack.
 
 
 == Changelog ==
+
+== 2.0.4 - May 21, 2019 ==
+
+* Php error in index.php and archive.php fixed
+
 
 == 2.0.3 - April 16, 2019 ==
 
