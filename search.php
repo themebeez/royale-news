@@ -19,7 +19,7 @@ get_header();
 	<div id="primary" class="content-area <?php royale_news_inner_container_class(); ?>">
 		<main id="main" class="site-main">
 			<div class="container">
-				<div class="row section">
+				<div class="row">
 					<?php
 					$sidebar_position = royale_news_get_option( 'royale_news_sidebar_position' );
 

@@ -77,6 +77,12 @@ if ( ! function_exists( 'royale_news_get_default_theme_options' ) ) :
 		// Featured Posts In Blog Page
 		$defaults['royale_news_enable_featured_post']	= 0;
 
+		// Post single
+		$defaults['royale_news_post_single_enable_featured_img'] = 1;
+
+		// Page single
+		$defaults['royale_news_page_single_enable_featured_img'] = 1;
+
 		// Theme Sidebar
 		$defaults['royale_news_sidebar_position']		= 'right';
 
