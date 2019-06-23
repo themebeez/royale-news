@@ -1419,8 +1419,8 @@ a:active {
 
 .breadcrumb {
 
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     background-color: #000;
     background-position: center;
     background-size: cover;
@@ -1659,6 +1659,7 @@ a:active {
     padding-left: 0px;
     margin-left: 0px;
     margin-top: 20px;
+    list-style: none;
 }
 
 .comments-title {
@@ -1681,6 +1682,7 @@ a:active {
 
 .comment .children {
     margin-top: 20px;
+    list-style: none;
 }
 
 .comment-body {
@@ -1881,6 +1883,7 @@ b.fn {
     opacity: 0;
     transition-duration: .3s;
     transition-timing-function: ease-out;
+    z-index: 10;
 }
 
 .main-navigation ul li:hover>ul,
@@ -1894,6 +1897,7 @@ b.fn {
 .main-navigation .primary-menu li .sub-menu li a {
     background-color: #000;
     color: #fff;
+    padding: 12px 20px;
 }
 
 .main-navigation ul ul ul {
@@ -1914,6 +1918,7 @@ b.fn {
     opacity: 1;
     transition-duration: .3s;
     transition-timing-function: ease-in;
+    z-index: 11;
 }
 
 .mean-container .mean-nav ul>li>a {

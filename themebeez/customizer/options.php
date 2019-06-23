@@ -218,6 +218,51 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize,'royale_news_e
 
 
 /*-----------------------------------------
+  	Post Single Option
+-----------------------------------------*/
+$wp_customize->add_section( 'royale_news_post_single_option', array(
+	'priority'			=> 20,
+	'title'				=> esc_html__( 'Post Single Options', 'royale-news' ),
+	'description'		=> esc_html__( 'Configure post single', 'royale-news' ),
+	'panel'				=> 'royale_news_options'
+) );
+
+$wp_customize->add_setting('royale_news_post_single_enable_featured_img',array(
+	'sanitize_callback' => 'royale_news_sanitize_checkbox',
+	'default' 			=> $default['royale_news_post_single_enable_featured_img'],
+) );
+
+$wp_customize->add_control( 'royale_news_post_single_enable_featured_img', array(
+	'label' 			=> esc_html__('Display Featured Image','royale-news'),
+	'section' 			=> 'royale_news_post_single_option',
+	'type'				=> 'checkbox',
+));
+
+
+/*-----------------------------------------
+  	Page Single Option
+-----------------------------------------*/
+$wp_customize->add_section( 'royale_news_page_single_option', array(
+	'priority'			=> 20,
+	'title'				=> esc_html__( 'Page Single Options', 'royale-news' ),
+	'description'		=> esc_html__( 'Configure page single', 'royale-news' ),
+	'panel'				=> 'royale_news_options'
+) );
+
+$wp_customize->add_setting('royale_news_page_single_enable_featured_img',array(
+	'sanitize_callback' => 'royale_news_sanitize_checkbox',
+	'default' 			=> $default['royale_news_page_single_enable_featured_img'],
+) );
+
+$wp_customize->add_control( 'royale_news_page_single_enable_featured_img', array(
+	'label' 			=> esc_html__('Display Featured Image','royale-news'),
+	'section' 			=> 'royale_news_page_single_option',
+	'type'				=> 'checkbox',
+));
+
+
+
+/*-----------------------------------------
   	Theme Sidebar Option
 -----------------------------------------*/
 $wp_customize->add_section( 'royale_news_sidebar_section', array(
