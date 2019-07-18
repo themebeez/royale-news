@@ -90,7 +90,7 @@ if ( ! function_exists( 'royale_news_recommended_plugins' ) ) :
             ),
             array(
                 'name'     => esc_html__( 'Universal Google AdSense And Ads Manager', 'royale-news' ),
-                'slug'     => 'universal-google-adSense-and-ads-manager',
+                'slug'     => 'universal-google-adsense-and-ads-manager',
                 'required' => false,
             ),
         );

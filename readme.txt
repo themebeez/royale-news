@@ -84,6 +84,7 @@ Royale News includes support for Infinite Scroll in Jetpack.
 == 2.0.6 - July 17, 2019 ==
 
 * Fixed: Gutenberg styles ( BETA )
+* UGGAM slug fixed in plugin recommendation
 
 
 == 2.0.5 - June 23, 2019 ==
