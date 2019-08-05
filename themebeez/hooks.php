@@ -58,6 +58,12 @@ if( ! function_exists( 'royale_news_body_before_action' ) ) :
  	function royale_news_body_before_action() {
  	?>
  		<body <?php body_class(); ?>>
+ 			<?php  
+ 			if( function_exists( 'wp_body_open' ) ) {
+ 				wp_body_open();
+ 			}
+ 			?>
+ 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'royale-news' ); ?></a>
  			<?php
  				if( get_background_image() ) :
  			?>
@@ -536,6 +542,27 @@ if( ! function_exists( 'royale_news_header_after_action' ) ) :
  	}
 endif;
 add_action( 'royale_news_header_after', 'royale_news_header_after_action', 10 );
+
+if( ! function_exists( 'royale_news_content_wrapper_start_action' ) ) :
+
+	function royale_news_content_wrapper_start_action() {
+		?>
+		<div id="content" class="site-content">
+		<?php
+	}
+endif;
+add_action( 'royale_news_content_wrapper_start', 'royale_news_content_wrapper_start_action', 10 );
+
+
+if( ! function_exists( 'royale_news_content_wrapper_end_action' ) ) :
+
+	function royale_news_content_wrapper_end_action() {
+		?>
+		</div>
+		<?php
+	}
+endif;
+add_action( 'royale_news_content_wrapper_end', 'royale_news_content_wrapper_end_action', 10 );
 
 /*======================================================
 			Breadcrumb Hook of the theme

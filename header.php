@@ -150,3 +150,10 @@
    	* @hooked royale_news_header_after_action - 10
    	*/
    	do_action( 'royale_news_header_after' );
+
+   	/**
+   	* Hook - royale_news_content_wrapper_start.
+   	*
+   	* @hooked royale_news_content_wrapper_start_action - 10
+   	*/
+   	do_action( 'royale_news_content_wrapper_start' );

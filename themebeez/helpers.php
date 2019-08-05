@@ -88,11 +88,6 @@ if ( ! function_exists( 'royale_news_recommended_plugins' ) ) :
                 'slug'     => 'themebeez-toolkit',
                 'required' => false,
             ),
-            array(
-                'name'     => esc_html__( 'Universal Google AdSense And Ads Manager', 'royale-news' ),
-                'slug'     => 'universal-google-adsense-and-ads-manager',
-                'required' => false,
-            ),
         );
 
         tgmpa( $plugins );

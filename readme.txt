@@ -4,16 +4,16 @@ Contributors: themebeez
 Requires PHP: 5.6
 Requires at least: 4.8
 Tested up to: 5.2.2
-Stable tag: 2.0.6
+Stable tag: 2.0.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, news, two-columns, three-columns, theme-options, translation-ready, footer-widgets
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, news, two-columns, three-columns, theme-options, translation-ready, footer-widgets, blog
 
 A starter theme called Royale News.
 
 == Description ==
 
-Royale News is best magazine WordPress theme if you are looking for clean, minimal & 2018 trendy WordPress magazine theme. In short royale news can be described as very light weight WordPress theme which is capable of running your news portal, publishing website, magazine website or editorial websites perfectly.It is also translation ready.
+Royale News is a simple, clean, minimal and lightweight WordPress theme for creating magazine and news websites. It is a modern theme with elgant, resposive and user friendly design. With one click demo import it is easy to setup your website. Customization is easy due to built in theme options. One can easily manage contents and sections with the help of built in widgets. It is gutenberg compatible and has support for many plugins such as Yoast, Contact Form 7, Universal Google AdSense And Ads Manager, Simple GDPR Cookie Compliance. etc. It is also translation ready. For more detail visit, https://themebeez.com/themes/royale-news/. To view demos, visit, https://themebeez.com/demos/?theme=royale-news
 
 == Copyright ==
 
@@ -49,10 +49,11 @@ Royale News is distributed under the terms of the GNU GPL
 
 Images used in screenshot
 
-https://pxhere.com/en/photo/1364962 ( https://pxhere.com/en/license | https://creativecommons.org/publicdomain/zero/1.0/ - CCO )
-https://pxhere.com/en/photo/850478 ( https://pxhere.com/en/license | https://creativecommons.org/publicdomain/zero/1.0/ - CCO )
-https://pxhere.com/en/photo/42871 ( https://pxhere.com/en/license | https://creativecommons.org/publicdomain/zero/1.0/ - CCO )
-https://pxhere.com/en/photo/146974 ( https://pxhere.com/en/license | https://creativecommons.org/publicdomain/zero/1.0/ - CCO )
+https://pxhere.com/en/photo/1535013 ( https://pxhere.com/en/license | https://creativecommons.org/publicdomain/zero/1.0/ - CCO )
+https://pxhere.com/en/photo/1571887 ( https://pxhere.com/en/license | https://creativecommons.org/publicdomain/zero/1.0/ - CCO )
+https://pxhere.com/en/photo/1046965 ( https://pxhere.com/en/license | https://creativecommons.org/publicdomain/zero/1.0/ - CCO )
+https://pxhere.com/en/photo/640964 ( https://pxhere.com/en/license | https://creativecommons.org/publicdomain/zero/1.0/ - CCO )
+https://pxhere.com/en/photo/830746 ( https://pxhere.com/en/license | https://creativecommons.org/publicdomain/zero/1.0/ - CCO )
 
 
 
@@ -80,6 +81,15 @@ Royale News includes support for Infinite Scroll in Jetpack.
 
 
 == Changelog ==
+
+== 2.0.7 - August 5, 2019 ==
+
+* wp_body_open() function added
+* Support for skip links
+* Screenshot has been changed
+* UGAAM recommendation removed
+* Theme description changed
+
 
 == 2.0.6 - July 17, 2019 ==
 

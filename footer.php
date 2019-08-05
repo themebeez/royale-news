@@ -10,6 +10,13 @@
  */
 
 	/**
+	* Hook - royale_news_content_wrapper_end.
+	*
+	* @hooked royale_news_content_wrapper_end_action - 10
+	*/
+	do_action( 'royale_news_content_wrapper_end' );
+
+	/**
 	* Hook - royale_news_footer_before.
 	*
 	* @hooked royale_news_footer_before_action - 10
