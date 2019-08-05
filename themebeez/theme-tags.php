@@ -48,7 +48,7 @@ if( ! function_exists( 'royale_news_get_date' ) ) :
 
 			printf(
 				/* translators: %s: post date. */
-				esc_html_x( '&nbsp;%s', 'post date', 'royale-news' ),'<span class="posted-date"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a></span>' );
+				esc_html_x( '&nbsp;%s', 'post date', 'royale-news' ),'<span class="posted-date"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a></span>' ); // phpcs:ignore
 		}
 	}
 endif;
@@ -63,10 +63,11 @@ if( ! function_exists( 'royale_news_get_categories' ) ) :
 			//Hide category and tag text for pages.
 			if ( 'post' === get_post_type() ) {
 				/* translators: used between list items, there is a space after the comma */
-				$categories_list = get_the_category_list( esc_html__( ' ', 'royale-news' ) );
+				$categories_list = get_the_category_list( ' ' );
 				if ( $categories_list ) {
-					/* translators: 1: list of categories. */
-					printf( '<span class="cat-links">' . esc_html__( '%1$s', 'royale-news' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+					?>
+					<span class="cat-links"><?php echo $categories_list; // phpcs:ignore ?></span>
+					<?php
 				}
 			}
 		}
