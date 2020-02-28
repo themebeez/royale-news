@@ -6,7 +6,7 @@
  *
  * @package Royale_News
  */
-$display_featured_image = royale_news_get_option( 'royale_news_post_single_enable_featured_img' );
+$royale_news_display_featured_image = royale_news_get_option( 'royale_news_post_single_enable_featured_img' );
 ?>
 <div class="col-md-12">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -15,7 +15,7 @@ $display_featured_image = royale_news_get_option( 'royale_news_post_single_enabl
 		</div><!-- .news-section-info -->
 		<div class="single-news-content">
 			<?php
-			if( has_post_thumbnail() && $display_featured_image == 1 ) {
+			if( has_post_thumbnail() && $royale_news_display_featured_image == 1 ) {
 				?>
 				<div class="news-image">
 					<?php the_post_thumbnail( 'full', array( 'class' => 'img-responsive', 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>

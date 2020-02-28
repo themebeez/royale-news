@@ -84,7 +84,7 @@ if ( ! function_exists( 'royale_news_recommended_plugins' ) ) :
 
         $plugins = array(
             array(
-                'name'     => esc_html__( 'Themebeez Toolkit', 'royale-news' ),
+                'name'     => 'Themebeez Toolkit',
                 'slug'     => 'themebeez-toolkit',
                 'required' => false,
             ),

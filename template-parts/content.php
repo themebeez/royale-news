@@ -54,5 +54,3 @@
 		</div>
 	</div><!-- .row.clearfix.archive-news-content #post-<?php the_ID(); ?> -->
 </div><!-- .archive-section-content -->
-
-

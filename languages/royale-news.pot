@@ -1,4 +1,4 @@
-# Copyright (C) 2019 Royale News
+# Copyright (C) 2020 Royale News
 # This file is distributed under the same license as the Royale News package.
 msgid ""
 msgstr ""
@@ -6,7 +6,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language-Team: themebeez <themebeez@gmail.com>\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -390,39 +389,39 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: themebeez/filters.php:81
+#: themebeez/filters.php:85
 msgid "Full Name *"
 msgstr ""
 
-#: themebeez/filters.php:86
+#: themebeez/filters.php:90
 msgid "Email Address *"
 msgstr ""
 
-#: themebeez/filters.php:91
+#: themebeez/filters.php:95
 msgid "Website"
 msgstr ""
 
-#: themebeez/filters.php:108
+#: themebeez/filters.php:112
 msgid "comment_news comment-form"
 msgstr ""
 
-#: themebeez/filters.php:109
+#: themebeez/filters.php:113
 msgid "Leave comment"
 msgstr ""
 
-#: themebeez/filters.php:112
+#: themebeez/filters.php:116
 msgid "Your email address will not be published. Required fields are marked with *."
 msgstr ""
 
-#: themebeez/filters.php:114
+#: themebeez/filters.php:118
 msgid "Comment"
 msgstr ""
 
-#: themebeez/filters.php:117
+#: themebeez/filters.php:121
 msgid "btn btn-default submit-btn"
 msgstr ""
 
-#: themebeez/filters.php:118
+#: themebeez/filters.php:122
 msgid "Post A Comment"
 msgstr ""
 
@@ -444,10 +443,6 @@ msgstr ""
 
 #: themebeez/helpers.php:61
 msgid "Add a menu"
-msgstr ""
-
-#: themebeez/helpers.php:87
-msgid "Themebeez Toolkit"
 msgstr ""
 
 #: themebeez/hooks.php:66
@@ -472,97 +467,83 @@ msgstr ""
 msgid "%1$s by %2$s"
 msgstr ""
 
-#. translators: %s: post author.
-#: themebeez/theme-tags.php:21
-msgctxt "post author"
-msgid "&nbsp;%s"
-msgstr ""
-
-#. translators: %s: post date.
-#: themebeez/theme-tags.php:51
-msgctxt "post date"
-msgid "&nbsp;%s"
-msgstr ""
-
-#. translators: 1: no of comments.
-#. translators: 1: no of comments.
-#. translators: 1: no of comments.
-#: themebeez/theme-tags.php:89, themebeez/theme-tags.php:92, themebeez/theme-tags.php:95
-msgid "&nbsp;%1$s"
-msgstr ""
-
-#: themebeez/third-party/breadcrumbs.php:244
+#: themebeez/third-party/breadcrumbs.php:268
 msgid "Browse:"
 msgstr ""
 
-#: themebeez/third-party/breadcrumbs.php:245
+#: themebeez/third-party/breadcrumbs.php:269
 msgctxt "breadcrumbs aria label"
 msgid "Breadcrumbs"
 msgstr ""
 
-#: themebeez/third-party/breadcrumbs.php:246
+#: themebeez/third-party/breadcrumbs.php:270
 msgid "Home"
 msgstr ""
 
-#: themebeez/third-party/breadcrumbs.php:247
+#: themebeez/third-party/breadcrumbs.php:271
 msgid "404 Not Found"
 msgstr ""
 
-#: themebeez/third-party/breadcrumbs.php:248
+#: themebeez/third-party/breadcrumbs.php:272
 msgid "Archives"
 msgstr ""
 
-#. translators: %s is the search query. The HTML entities are opening and closing curly quotes.
-#: themebeez/third-party/breadcrumbs.php:250
-msgid "Search results for &#8220;%s&#8221;"
+#. translators: %s is the search query.
+#: themebeez/third-party/breadcrumbs.php:274
+msgid "Search results for: %s"
 msgstr ""
 
 #. translators: %s is the page number.
-#: themebeez/third-party/breadcrumbs.php:252
+#: themebeez/third-party/breadcrumbs.php:276
 msgid "Page %s"
 msgstr ""
 
+#. translators: %s is the page number.
+#: themebeez/third-party/breadcrumbs.php:278
+msgid "Comment Page %s"
+msgstr ""
+
 #. translators: Minute archive title. %s is the minute time format.
-#: themebeez/third-party/breadcrumbs.php:254
+#: themebeez/third-party/breadcrumbs.php:280
 msgid "Minute %s"
 msgstr ""
 
 #. translators: Weekly archive title. %s is the week date format.
-#: themebeez/third-party/breadcrumbs.php:256
+#: themebeez/third-party/breadcrumbs.php:282
 msgid "Week %s"
 msgstr ""
 
-#: themebeez/third-party/breadcrumbs.php:708
+#: themebeez/third-party/breadcrumbs.php:742
 msgctxt "minute and hour archives time format"
 msgid "g:i a"
 msgstr ""
 
-#: themebeez/third-party/breadcrumbs.php:725
+#: themebeez/third-party/breadcrumbs.php:759
 msgctxt "minute archives time format"
 msgid "i"
 msgstr ""
 
-#: themebeez/third-party/breadcrumbs.php:742
+#: themebeez/third-party/breadcrumbs.php:776
 msgctxt "hour archives time format"
 msgid "g a"
 msgstr ""
 
-#: themebeez/third-party/breadcrumbs.php:758, themebeez/third-party/breadcrumbs.php:787, themebeez/third-party/breadcrumbs.php:814, themebeez/third-party/breadcrumbs.php:841, themebeez/third-party/breadcrumbs.php:1180
+#: themebeez/third-party/breadcrumbs.php:792, themebeez/third-party/breadcrumbs.php:821, themebeez/third-party/breadcrumbs.php:848, themebeez/third-party/breadcrumbs.php:875, themebeez/third-party/breadcrumbs.php:1215
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: themebeez/third-party/breadcrumbs.php:759, themebeez/third-party/breadcrumbs.php:815, themebeez/third-party/breadcrumbs.php:1184
+#: themebeez/third-party/breadcrumbs.php:793, themebeez/third-party/breadcrumbs.php:849, themebeez/third-party/breadcrumbs.php:1219
 msgctxt "monthly archives date format"
 msgid "F"
 msgstr ""
 
-#: themebeez/third-party/breadcrumbs.php:760, themebeez/third-party/breadcrumbs.php:1188
+#: themebeez/third-party/breadcrumbs.php:794, themebeez/third-party/breadcrumbs.php:1223
 msgctxt "daily archives date format"
 msgid "j"
 msgstr ""
 
-#: themebeez/third-party/breadcrumbs.php:788
+#: themebeez/third-party/breadcrumbs.php:822
 msgctxt "weekly archives date format"
 msgid "W"
 msgstr ""

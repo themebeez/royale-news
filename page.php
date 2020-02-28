@@ -26,15 +26,15 @@ get_header();
 			<div class="container">
 				<div class="row">
 					<?php
-					$sidebar_position = royale_news_get_option( 'royale_news_sidebar_position' );
+					$royale_news_sidebar_position = royale_news_get_option( 'royale_news_sidebar_position' );
 
-					if( $sidebar_position == 'none' || !is_active_sidebar( 'sidebar-1' ) ) {
+					if( $royale_news_sidebar_position == 'none' || !is_active_sidebar( 'sidebar-1' ) ) {
 						$class = 'col-md-12';
 					} else {
 						$class = 'col-md-8 sticky-section';
 					}
 
-					if( $sidebar_position == 'left' ) {
+					if( $royale_news_sidebar_position == 'left' ) {
 						get_sidebar();
 					}
 					?>
@@ -55,7 +55,7 @@ get_header();
 						</div><!-- .row.clearfix.news-section -->
 					</div>
 					<?php
-					if( $sidebar_position == 'right' ) {
+					if( $royale_news_sidebar_position == 'right' ) {
 						get_sidebar();
 					}
 					?>

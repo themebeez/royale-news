@@ -12,10 +12,10 @@ if( !function_exists( 'royale_news_search_form' ) ) :
      * @since 1.0.0
      */
 	function royale_news_search_form() {
-		$form = '<form role="search" method="get" id="search-form" class="search-form" action="' . esc_url( home_url( '/' ) ) . '" >
+		$form = '<form role="search" method="get" class="search-form" action="' . esc_url( home_url( '/' ) ) . '" >
 			    	<div class="input-group stylish-input-group">
 			    		<label class="screen-reader-text" for="s">' . esc_html__( 'Search for:', 'royale-news' ) . '</label>
-			    		<input type="text" value="' . get_search_query() . '" name="s" id="s" class="form-control" />
+			    		<input type="text" value="' . get_search_query() . '" name="s" class="form-control" />
 			    		<span class="input-group-addon">
 			    			<button type="submit" id="searchsubmit" value="'. esc_attr__( 'Search', 'royale-news' ).'">
 			    				<i class="fa fa-search"></i>
@@ -38,7 +38,9 @@ if( !function_exists( 'royale_news_excerpt_more' ) ) :
 	 * Excerpt More
 	 */
 	function royale_news_excerpt_more( $more ) {
+
 		if( is_admin() ) {
+
 			return $more;
 		}
 		return '';
@@ -51,7 +53,9 @@ if( !function_exists( 'royale_news_excerpt_length' ) ) :
 	 * Excerpt More
 	 */
 	function royale_news_excerpt_length( $length ) {
+
 		if( is_admin() ) {
+			
 			return $length;
 		}
 
