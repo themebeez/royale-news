@@ -7,9 +7,9 @@
  * @package Royale_News
  */
 
-$current_theme = wp_get_theme( 'royale-news' );
+$royale_news_current_theme = wp_get_theme( 'royale-news' );
 
-define( 'ROYALE_NEWS_VERSION', $current_theme->get( 'Version' ) );
+define( 'ROYALE_NEWS_VERSION', $royale_news_current_theme->get( 'Version' ) );
 
 if ( ! function_exists( 'royale_news_setup' ) ) :
 	/**

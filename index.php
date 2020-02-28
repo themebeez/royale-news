@@ -17,9 +17,9 @@ get_header(); ?>
 		<main id="main" class="site-main">
 			<?php
 
-			$enable_feature = royale_news_get_option( 'royale_news_enable_featured_post' );
+			$royale_news_enable_feature = royale_news_get_option( 'royale_news_enable_featured_post' );
 
-			if ( is_active_sidebar( 'sidebar-2' ) && $enable_feature == 1 ) {
+			if ( is_active_sidebar( 'sidebar-2' ) && $royale_news_enable_feature == 1 ) {
 				?>
 				<div class="featured-widget-container">
 					<div class="container">
@@ -32,15 +32,15 @@ get_header(); ?>
 			<div class="container">
 				<div class="row">
 					<?php
-					$sidebar_position = royale_news_get_option( 'royale_news_sidebar_position' );
+					$royale_news_sidebar_position = royale_news_get_option( 'royale_news_sidebar_position' );
 
-					if( $sidebar_position == 'none' || !is_active_sidebar( 'sidebar-1' ) ) {
+					if( $royale_news_sidebar_position == 'none' || !is_active_sidebar( 'sidebar-1' ) ) {
 						$class = 'col-md-12';
 					} else {
 						$class = 'col-md-8 sticky-section';
 					}
 
-					if( $sidebar_position == 'left' ) {
+					if( $royale_news_sidebar_position == 'left' ) {
 						get_sidebar();
 					}
 					?>
@@ -83,7 +83,7 @@ get_header(); ?>
 					</div><!-- .esc_attr( $class ) -->
 
 					<?php
-					if( $sidebar_position == 'right' ) :
+					if( $royale_news_sidebar_position == 'right' ) :
 						get_sidebar();
 					endif;
 					?>

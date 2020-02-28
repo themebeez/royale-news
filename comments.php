@@ -28,8 +28,8 @@ if ( post_password_required() ) {
 		if ( have_comments() ) : ?>
 			<h3 class="comments-title">
 				<?php
-				$comment_count = get_comments_number();
-				if ( 1 === $comment_count ) {
+				$royale_news_comment_count = get_comments_number();
+				if ( 1 === $royale_news_comment_count ) {
 					printf(
 						/* translators: 1: title. */
 						esc_html_e( 'One thought on &ldquo;%1$s&rdquo;', 'royale-news' ),
@@ -38,8 +38,8 @@ if ( post_password_required() ) {
 				} else {
 					printf( // WPCS: XSS OK.
 						/* translators: 1: comment count number, 2: title. */
-						esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'royale-news' ) ),
-						number_format_i18n( $comment_count ),
+						esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $royale_news_comment_count, 'comments title', 'royale-news' ) ),
+						number_format_i18n( $royale_news_comment_count ),
 						'<span>' . get_the_title() . '</span>'
 					);
 				}

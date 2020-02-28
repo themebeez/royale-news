@@ -16,10 +16,11 @@ if( ! function_exists( 'royale_news_get_author' ) ) :
 		if( $show_author == 1 ) {
 
 			if ( 'post' === get_post_type() ) {
-				printf(
-					/* translators: %s: post author. */
-					esc_html_x( '&nbsp;%s', 'post author', 'royale-news' ),	'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-				);
+				?>
+				<span class="author vcard">
+					<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo esc_html( get_the_author() ); ?></a>
+				</span>
+				<?php
 			}
 		}
 
@@ -45,10 +46,11 @@ if( ! function_exists( 'royale_news_get_date' ) ) :
 		);
 
 		if( $show_date == 1 ) {
-
-			printf(
-				/* translators: %s: post date. */
-				esc_html_x( '&nbsp;%s', 'post date', 'royale-news' ),'<span class="posted-date"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a></span>' ); // phpcs:ignore
+			?>
+			<span class="posted-date">
+				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php echo $time_string; // phpcs:ignore ?></a>
+			</span>
+			<?php
 		}
 	}
 endif;
@@ -57,6 +59,7 @@ endif;
 if( ! function_exists( 'royale_news_get_categories' ) ) :
 
 	function royale_news_get_categories() {
+
 		$show_categories = royale_news_get_option( 'royale_news_show_categories' );
 
 		if( $show_categories == 1 ) {
@@ -79,21 +82,17 @@ if( ! function_exists( 'royale_news_get_comments_no' ) ) :
 	function royale_news_get_comments_no() {
 
 		$show_comments_no = royale_news_get_option( 'royale_news_show_comments_no' );
+
 		// get_comments_number returns only a numeric value
 		$num_comments = get_comments_number(); 
 
 		if( $show_comments_no == 1 && comments_open() ) {
 
-			if ( $num_comments == 0 ) {
-				/* translators: 1: no of comments. */
-				printf( '<span class="comments-link"><a href="' . esc_url( get_permalink() ) .'">' . esc_html__( '&nbsp;%1$s', 'royale-news' ) . '</a></span>', absint( $num_comments ) );
-			} else if ( $num_comments > 1 ) {
-				/* translators: 1: no of comments. */
-				printf( '<span class="comments-link"><a href="' . esc_url( get_permalink() ) .'">' . esc_html__( '&nbsp;%1$s', 'royale-news' ) . '</a></span>', absint( $num_comments ) );
-			} else {
-				/* translators: 1: no of comments. */
-				printf( '<span class="comments-link"><a href="' . esc_url( get_permalink() ) .'">' . esc_html__( '&nbsp;%1$s', 'royale-news' ) . '</a></span>', absint( $num_comments ) );
-			}
+			?>
+			<span class="comments-link">
+				<a href="<?php the_permalink(); ?>"><?php echo esc_html( number_format_i18n( $num_comments ) ); ?></a>
+			</span>
+			<?php
 		}
 	}
 endif;
