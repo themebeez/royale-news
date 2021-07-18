@@ -579,7 +579,7 @@ if( ! class_exists( 'Royale_News_Main_Featured_Posts_Two' ) ) :
 			</p>
 			<p>
 				<label for="<?php echo esc_attr( $this->get_field_id( 'slider_post_no' ) )?>"><strong><?php echo esc_html__( 'Slider Post No: ', 'royale-news' )?></strong></label>
-				<input type="number" id="<?php echo esc_attr( $this->get_field_id( 'slider_post_no' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'slider_post_no' ) ); ?>" value="<?php echo esc_attr( $instance['slider_post_no'] ); ?>" class="widefat">
+				<input type="number" id="<?php echo esc_attr( $this->get_field_id( 'slider_post_no' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'slider_post_no' ) ); ?>" value="<?php echo esc_attr( $slider_post_no ); ?>" class="widefat">
 			</p>
 			<p>
 				<label for="<?php echo esc_attr( $this->get_field_id( 'cat_2' ) )?>"><?php echo esc_html__( 'Right Top Highlight:', 'royale-news' ); ?></label>
