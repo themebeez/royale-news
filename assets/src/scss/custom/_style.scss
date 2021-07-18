@@ -1026,7 +1026,7 @@ body.no-sidebar.boxed .alignwide {
 */
 
 
-#recentcomments,
+.widget_recent_comments ul,
 .widget_archive ul,
 .widget_categories ul,
 .widget_meta ul,
@@ -1040,7 +1040,7 @@ body.no-sidebar.boxed .alignwide {
     padding: 0px 0px;
 }
 
-#recentcomments .recentcomments,
+.widget_recent_comments ul li,
 .widget_archive ul li,
 .widget_categories ul li,
 .widget_meta ul li,
@@ -1237,7 +1237,7 @@ body.no-sidebar.boxed .alignwide {
     margin-top: 15px;
 }
 
-.sidebar #recentcomments .recentcomments,
+.sidebar .widget_recent_comments ul li,
 .sidebar .widget_archive ul li,
 .sidebar .widget_categories ul li,
 .sidebar .widget_meta ul li,
@@ -1323,7 +1323,7 @@ body.no-sidebar.boxed .alignwide {
     padding-bottom: 0px;
 }
 
-.footer #recentcomments .recentcomments,
+.footer .widget_recent_comments ul li,
 .footer .widget_archive ul li,
 .footer .widget_categories ul li,
 .footer .widget_meta ul li,
