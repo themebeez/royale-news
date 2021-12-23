@@ -1,10 +1,10 @@
 === Royale News ===
 
 Contributors: themebeez
-Requires PHP: 5.6
+Requires PHP: 7.0.0
 Requires at least: 5.0
-Tested up to: 5.8
-Stable tag: 2.0.9
+Tested up to: 5.8.2
+Stable tag: 2.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, news, two-columns, three-columns, theme-options, footer-widgets, blog
@@ -81,6 +81,10 @@ Royale News includes support for Infinite Scroll in Jetpack.
 
 
 == Changelog ==
+
+== 2.1.0 - Dec 23, 2021 ==
+
+* Fix: Hamburger menu lines.
 
 == 2.0.9 - July 18, 2021 == 
 
