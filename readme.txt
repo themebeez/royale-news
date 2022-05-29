@@ -3,8 +3,8 @@
 Contributors: themebeez
 Requires PHP: 7.0.0
 Requires at least: 5.0
-Tested up to: 5.8.2
-Stable tag: 2.1.0
+Tested up to: 6.0
+Stable tag: 2.2.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, news, two-columns, three-columns, theme-options, footer-widgets, blog
@@ -17,7 +17,7 @@ Royale News is a simple, clean, minimal and lightweight WordPress theme for crea
 
 == Copyright ==
 
-Royale News WordPress Theme, Copyright (C) 2021, themebeez
+Royale News WordPress Theme, Copyright (C) 2022, themebeez
 Royale News is distributed under the terms of the GNU GPL
 
 == Credits ==
@@ -81,6 +81,11 @@ Royale News includes support for Infinite Scroll in Jetpack.
 
 
 == Changelog ==
+
+== 2.2.0 - 29 May, 2022 ==
+
+* Update: Everest Backup plugin recommended.
+* Fix: PHP error in customzier ticker news categories dropdown fixed.
 
 == 2.1.0 - Dec 23, 2021 ==
 
