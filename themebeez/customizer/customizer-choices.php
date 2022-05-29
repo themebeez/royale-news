@@ -11,9 +11,11 @@ if( !function_exists( 'royale_news_categories_choices' ) ) {
 
 		$post_categories = array();
 
-		foreach( $category_terms as $category_term ) {
-			$post_categories[$category_term->term_id] = $category_term->name;
-		}
+		if ( $category_terms ) {
+			foreach( $category_terms as $category_term ) {
+				$post_categories[$category_term->term_id] = $category_term->name;
+			}
+		}		
 
 		return $post_categories;
 	}

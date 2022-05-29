@@ -84,8 +84,14 @@ if( class_exists( 'WP_Customize_Control' ) ) :
 		            <?php
 		            if ( $choices ) {
 		              	foreach ( $choices as $value => $label ) {
+							$selected = "";
+							if ( is_array( $default_values ) && array_key_exists( $value, $default_values ) ) {
+								$selected = "selected";
+							} else {
+								$selected = ( $default_values == $value ) ? "selected" : "";
+							}
 			                ?>
-			                <option value="<?php echo esc_attr( $value ); ?>" <?php selected( in_array( $value, $default_values ), true ); ?>><?php echo esc_html( $label ); ?></option>
+			                <option value="<?php echo esc_attr( $value ); ?>" <?php echo $selected ?>><?php echo esc_html( $label ); ?></option>
 			                <?php
 		              	}
 		            }

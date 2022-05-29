@@ -280,3 +280,8 @@ require get_template_directory() . '/themebeez/widgets/widget-init.php';
  * Load Widgets.
  */
 require get_template_directory() . '/themebeez/third-party/class-tgm-plugin-activation.php';
+
+/**
+ * Load Everest Backup Plugin Notice.
+ */
+require get_template_directory() . '/inc/ebwp-notice.php';
