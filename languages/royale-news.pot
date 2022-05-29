@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Royale News 2.1.0\n"
+"Project-Id-Version: Royale News 2.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/royale-news\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-05-18T11:42:17+00:00\n"
+"POT-Creation-Date: 2022-05-29T09:00:45+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: royale-news\n"
@@ -131,6 +131,45 @@ msgstr ""
 msgid "Upgrade to Pro"
 msgstr ""
 
+#: inc/ebwp-notice.php:288
+msgid "Thank You !!!"
+msgstr ""
+
+#. translators: %s is the Everest Backup plugin name wrapped with html.
+#: inc/ebwp-notice.php:295
+msgid "%s has been installed and activated successfully."
+msgstr ""
+
+#: inc/ebwp-notice.php:354
+msgid "Your website is super precious !"
+msgstr ""
+
+#. translators: %s is the Everest Backup plugin name wrapped with html.
+#: inc/ebwp-notice.php:361
+msgid "The best way to protect your website is by using %s plugin to keep your data safe and secure to remote storage.."
+msgstr ""
+
+#. translators: %s is the Everest Backup plugin name wrapped with html.
+#: inc/ebwp-notice.php:364
+msgid "You are just one step away. Please activate %s plugin and backup your website to keep your data safe and secure."
+msgstr ""
+
+#: inc/ebwp-notice.php:378
+msgid "Install & Activate"
+msgstr ""
+
+#: inc/ebwp-notice.php:379
+msgid "Remind me later"
+msgstr ""
+
+#: inc/ebwp-notice.php:380
+msgid "Don't show this again"
+msgstr ""
+
+#: inc/ebwp-notice.php:386
+msgid "Activate Plugin"
+msgstr ""
+
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:73
 msgid ", "
@@ -204,20 +243,20 @@ msgstr ""
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: themebeez/customizer/customizer-choices.php:31
-#: themebeez/customizer/customizer-choices.php:46
+#: themebeez/customizer/customizer-choices.php:33
+#: themebeez/customizer/customizer-choices.php:48
 msgid "Left"
 msgstr ""
 
-#: themebeez/customizer/customizer-choices.php:32
+#: themebeez/customizer/customizer-choices.php:34
 msgid "Right"
 msgstr ""
 
-#: themebeez/customizer/customizer-choices.php:33
+#: themebeez/customizer/customizer-choices.php:35
 msgid "None"
 msgstr ""
 
-#: themebeez/customizer/customizer-choices.php:47
+#: themebeez/customizer/customizer-choices.php:49
 msgid "Center"
 msgstr ""
 
