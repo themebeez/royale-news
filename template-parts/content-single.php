@@ -1,11 +1,12 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part for displaying posts.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package Royale_News
  */
+
 $royale_news_display_featured_image = royale_news_get_option( 'royale_news_post_single_enable_featured_img' );
 ?>
 <div class="col-md-12">
@@ -15,10 +16,22 @@ $royale_news_display_featured_image = royale_news_get_option( 'royale_news_post_
 		</div><!-- .news-section-info -->
 		<div class="single-news-content">
 			<?php
-			if( has_post_thumbnail() && $royale_news_display_featured_image == 1 ) {
+			if ( has_post_thumbnail() && true === $royale_news_display_featured_image ) {
 				?>
 				<div class="news-image">
-					<?php the_post_thumbnail( 'full', array( 'class' => 'img-responsive', 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+					<?php
+					the_post_thumbnail(
+						'full',
+						array(
+							'class' => 'img-responsive',
+							'alt'   => the_title_attribute(
+								array(
+									'echo' => false,
+								)
+							),
+						)
+					);
+					?>
 				</div><!-- .news-image -->
 				<?php
 			}
@@ -31,23 +44,27 @@ $royale_news_display_featured_image = royale_news_get_option( 'royale_news_post_
 				</div><!-- .entry-meta -->
 				<div class="news-content editor-content-entry">
 					<?php
-					the_content( sprintf(
-						wp_kses(
-							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'royale-news' ),
-							array(
-								'span' => array(
-									'class' => array(),
-								),
-							)
-						),
-						get_the_title()
-					) );
+					the_content(
+						sprintf(
+							wp_kses(
+								/* translators: %s: Name of current post. Only visible to screen readers */
+								__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'royale-news' ),
+								array(
+									'span' => array(
+										'class' => array(),
+									),
+								)
+							),
+							get_the_title()
+						)
+					);
 
-					wp_link_pages( array(
-						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'royale-news' ),
-						'after'  => '</div>',
-					) );					
+					wp_link_pages(
+						array(
+							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'royale-news' ),
+							'after'  => '</div>',
+						)
+					);
 					?>
 				</div><!-- .news-content -->							        
 			</div><!-- .news-detail.clearfix -->

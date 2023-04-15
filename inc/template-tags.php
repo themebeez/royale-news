@@ -7,7 +7,7 @@
  * @package Royale_News
  */
 
-if ( ! function_exists( 'royale_news_posted_on' ) ) :
+if ( ! function_exists( 'royale_news_posted_on' ) ) {
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.
 	 */
@@ -23,7 +23,8 @@ if ( ! function_exists( 'royale_news_posted_on' ) ) :
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
 		}
 
-		$time_string = sprintf( $time_string,
+		$time_string = sprintf(
+			$time_string,
 			esc_attr( get_the_date( 'c' ) ),
 			esc_html( get_the_date() ),
 			esc_attr( get_the_modified_date( 'c' ) ),
@@ -32,7 +33,7 @@ if ( ! function_exists( 'royale_news_posted_on' ) ) :
 
 		$posted_on = '';
 
-		if( $show_date == 1 ) {
+		if ( true === $show_date ) {
 			?>
 			<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark"><?php echo $time_string; // phpcs:ignore. ?></a>
 			<?php
@@ -40,7 +41,7 @@ if ( ! function_exists( 'royale_news_posted_on' ) ) :
 
 		$byline = '';
 
-		if( $show_author == 1 ) {
+		if ( true === $show_author ) {
 			?>
 			<span class="author vcard"><a class="url fn n" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo esc_html( get_the_author() ); ?></a>
 			<?php
@@ -50,19 +51,23 @@ if ( ! function_exists( 'royale_news_posted_on' ) ) :
 
 		$comment = '';
 
-		if( $show_comments_no == 1 && comments_open() ) {
+		if (
+			true === $show_comments_no &&
+			comments_open()
+		) {
 
 			$comments_no = get_comments_number();
 
-			$comment = '<span class="comments-link"><a href="' . esc_url( get_comments_link() ) .'">' . absint( $comments_no ) . '</span>';
+			$comment = '<span class="comments-link"><a href="' . esc_url( get_comments_link() ) . '">' . absint( $comments_no ) . '</span>';
 		}
 
 		echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>' . $comment; // phpcs:ignore.
 
 	}
-endif;
+}
 
-if ( ! function_exists( 'royale_news_entry_footer' ) ) :
+
+if ( ! function_exists( 'royale_news_entry_footer' ) ) {
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
@@ -84,7 +89,14 @@ if ( ! function_exists( 'royale_news_entry_footer' ) ) :
 			}
 		}
 
-		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+		if (
+			! is_single() &&
+			! post_password_required() &&
+			(
+				comments_open() ||
+				get_comments_number()
+			)
+		) {
 			echo '<span class="comments-link">';
 			comments_popup_link(
 				sprintf(
@@ -120,5 +132,4 @@ if ( ! function_exists( 'royale_news_entry_footer' ) ) :
 			'</span>'
 		);
 	}
-endif;
-
+}

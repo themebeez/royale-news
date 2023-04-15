@@ -8,17 +8,16 @@
  */
 
 ?>
-
 <section class="no-results not-found">
 	<header class="none-section-info clearfix">
 		<h3 class="none-title"><?php esc_html_e( 'Nothing Found', 'royale-news' ); ?></h3>
 	</header><!-- .page-header -->
-
 	<div class="page-content">
 		<?php
-		if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
-
-			<p><?php
+		if ( is_home() && current_user_can( 'publish_posts' ) ) {
+			?>
+			<p>
+				<?php
 				printf(
 					wp_kses(
 						/* translators: 1: link to WP admin new post page. */
@@ -31,20 +30,20 @@
 					),
 					esc_url( admin_url( 'post-new.php' ) )
 				);
-			?></p>
-
-		<?php elseif ( is_search() ) : ?>
-
+				?>
+			</p>
+			<?php
+		} elseif ( is_search() ) {
+			?>
 			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'royale-news' ); ?></p>
 			<?php
-				get_search_form();
-
-		else : ?>
-
+			get_search_form();
+		} else {
+			?>
 			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'royale-news' ); ?></p>
 			<?php
-				get_search_form();
-
-		endif; ?>
+			get_search_form();
+		}
+		?>
 	</div><!-- .page-content -->
 </section><!-- .no-results -->

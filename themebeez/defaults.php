@@ -5,8 +5,7 @@
  * @package Royale_News
  */
 
-if ( ! function_exists( 'royale_news_get_option' ) ) :
-
+if ( ! function_exists( 'royale_news_get_option' ) ) {
 	/**
 	 * Get theme option.
 	 *
@@ -33,18 +32,15 @@ if ( ! function_exists( 'royale_news_get_option' ) ) :
 
 		if ( null !== $default_value ) {
 			$value = get_theme_mod( $key, $default_value );
-		}
-		else {
+		} else {
 			$value = get_theme_mod( $key );
 		}
 
 		return $value;
-
 	}
+}
 
-endif;
-
-if ( ! function_exists( 'royale_news_get_default_theme_options' ) ) :
+if ( ! function_exists( 'royale_news_get_default_theme_options' ) ) {
 
 	/**
 	 * Get default theme options.
@@ -55,46 +51,31 @@ if ( ! function_exists( 'royale_news_get_default_theme_options' ) ) :
 	 */
 	function royale_news_get_default_theme_options() {
 
-		$defaults = array();
-
-		$defaults['royale_news_logo_position']			= 'left';
-		$defaults['royale_news_site_title_font_size']	= 45;
-
-		// Top Header
-		$defaults['royale_news_ticker_news_title']		= '';
-		$defaults['royale_news_ticker_news_category']	= 0;
-		$defaults['royale_news_ticker_news_no']			= 5;
-		$defaults['royale_news_enable_current_date']	= 1;
-		$defaults['royale_news_enable_search_btn']		= 1;
-
-		// BreadCrumb 
-		$defaults['royale_news_enable_breadcrumb']		= 1;
-
-		// Footer
-		$defaults['royale_news_copyright_text']			= '';
-		$defaults['royale_news_enable_scroll_top']		= 1;
-
-		// Featured Posts In Blog Page
-		$defaults['royale_news_enable_featured_post']	= 0;
-
-		// Post single
-		$defaults['royale_news_post_single_enable_featured_img'] = 1;
-
-		// Page single
-		$defaults['royale_news_page_single_enable_featured_img'] = 1;
-
-		// Theme Sidebar
-		$defaults['royale_news_sidebar_position']		= 'right';
-
-		// Meta Options
-		$defaults['royale_news_show_date']				= 1;
-		$defaults['royale_news_show_author']			= 1;
-		$defaults['royale_news_show_comments_no']		= 1;
-		$defaults['royale_news_show_categories']		= 1;
-
-		// Excerpt Length
-		$defaults['royale_news_excerpt_length']		= 30;
+		$defaults = array(
+			'royale_news_logo_position'                   => 'left',
+			'royale_news_site_title_font_size'            => 45,
+			'royale_news_ticker_news_title'               => '',
+			'royale_news_ticker_news_category'            => 0,
+			'royale_news_ticker_news_no'                  => 5,
+			'royale_news_enable_current_date'             => 1,
+			'royale_news_enable_search_btn'               => 1,
+			'royale_news_enable_breadcrumb'               => 1,
+			'royale_news_copyright_text'                  => '',
+			'royale_news_enable_scroll_top'               => 1,
+			'royale_news_enable_featured_post'            => 0,
+			'royale_news_post_single_enable_featured_img' => 1,
+			'royale_news_page_single_enable_featured_img' => 1,
+			'royale_news_sidebar_position'                => 'right',
+			'royale_news_show_date'                       => 1,
+			'royale_news_show_author'                     => 1,
+			'royale_news_show_comments_no'                => 1,
+			'royale_news_show_categories'                 => 1,
+			'royale_news_excerpt_length'                  => 30,
+			'royale_news_disable_google_fonts'            => false,
+			'royale_news_body_font_family'                => 'Arial, sans-serif',
+			'royale_news_headings_font_family'            => 'Arial, sans-serif',
+		);
 
 		return $defaults;
 	}
-endif;
+}
