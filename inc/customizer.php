@@ -11,33 +11,47 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function royale_news_customize_register( $wp_customize ) {
+
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-	// Dropdown Category Class
-	require_once trailingslashit( get_template_directory() ) . '/themebeez/customizer/customizer-controls.php'; 
+	// Dropdown Category Taxonomy Control Class.
+	require_once trailingslashit( get_template_directory() ) . '/themebeez/customizer/controls/class-royale-news-dropdown-taxonomies-control.php';
 
-	// Sanitization Callback
-	require_once trailingslashit( get_template_directory() ) . '/themebeez/customizer/sanitize.php'; 
+	// Dropdown Multiple Select Control Class.
+	require_once trailingslashit( get_template_directory() ) . '/themebeez/customizer/controls/class-royale-news-dropdown-multiple-chooser.php';
 
-	// Customization Options
+	// Sanitization Callback.
+	require_once trailingslashit( get_template_directory() ) . '/themebeez/customizer/sanitize.php';
+
+	// Active callbacks.
+	require_once trailingslashit( get_template_directory() ) . '/themebeez/customizer/active-callback.php';
+
+	// Customization Options.
 	require_once trailingslashit( get_template_directory() ) . '/themebeez/customizer/options.php';
 
-	// Upspell
+	// Upspell.
 	require_once trailingslashit( get_template_directory() ) . '/themebeez/customizer/upsell.php';
 
 	$wp_customize->register_section_type( 'Royale_News_Customize_Section_Upsell' );
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
-		$wp_customize->selective_refresh->add_partial( 'blogname', array(
-			'selector'        => '.site-title a',
-			'render_callback' => 'royale_news_customize_partial_blogname',
-		) );
-		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
-			'selector'        => '.site-description',
-			'render_callback' => 'royale_news_customize_partial_blogdescription',
-		) );
+		$wp_customize->selective_refresh->add_partial(
+			'blogname',
+			array(
+				'selector'        => '.site-title a',
+				'render_callback' => 'royale_news_customize_partial_blogname',
+			)
+		);
+
+		$wp_customize->selective_refresh->add_partial(
+			'blogdescription',
+			array(
+				'selector'        => '.site-description',
+				'render_callback' => 'royale_news_customize_partial_blogdescription',
+			)
+		);
 	}
 
 	// Register sections.
@@ -87,14 +101,37 @@ add_action( 'customize_preview_init', 'royale_news_customize_preview_js' );
  * Enqueue scripts for customizer
  */
 function royale_news_customizer_js() {
-     
 
-    wp_enqueue_style( 'chosen', get_template_directory_uri() .'/themebeez/customizer/assets/css/chosen.css' );
+	wp_enqueue_style(
+		'chosen',
+		get_template_directory_uri() . '/themebeez/customizer/assets/css/chosen.css',
+		array(),
+		'1.8.3',
+		'all'
+	);
 
-    wp_enqueue_style( 'royale-news-customizer-style', get_template_directory_uri() . '/themebeez/customizer/assets/css/customizer-style.css');
-    
-    wp_enqueue_script( 'chosen', get_template_directory_uri() .'/themebeez/customizer/assets/js/chosen.js', array('jquery'), ROYALE_NEWS_VERSION, true  );   
+	wp_enqueue_style(
+		'royale-news-customizer-style',
+		get_template_directory_uri() . '/themebeez/customizer/assets/css/customizer-style.css',
+		array(),
+		ROYALE_NEWS_VERSION,
+		'all'
+	);
 
-	wp_enqueue_script( 'royale-news-customizer-script', get_template_directory_uri() .'/themebeez/customizer/assets/js/customizer-script.js', array('jquery'), ROYALE_NEWS_VERSION, true  );  
+	wp_enqueue_script(
+		'chosen',
+		get_template_directory_uri() . '/themebeez/customizer/assets/js/chosen.js',
+		array( 'jquery' ),
+		'1.8.3',
+		true
+	);
+
+	wp_enqueue_script(
+		'royale-news-customizer-script',
+		get_template_directory_uri() . '/themebeez/customizer/assets/js/customizer-script.js',
+		array( 'jquery' ),
+		ROYALE_NEWS_VERSION,
+		true
+	);
 }
 add_action( 'customize_controls_enqueue_scripts', 'royale_news_customizer_js' );

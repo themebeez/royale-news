@@ -116,6 +116,11 @@ body.no-sidebar.boxed .alignwide {
     transform:none;
 }
 
+.site-content {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
 .section-title,
 .sidebar .widget-title {
 
@@ -233,7 +238,7 @@ body.no-sidebar.boxed .alignwide {
 
 .social-menu li a[href*="youtube.com"]::before {
 
-    content: "\f167";
+    content: "\f16a";
 }
 
 
@@ -247,7 +252,7 @@ body.no-sidebar.boxed .alignwide {
 
 .featured-widget-container {
 
-    padding: 50px 0px;
+    margin-bottom: 50px;
 }
 
 
@@ -257,8 +262,7 @@ body.no-sidebar.boxed .alignwide {
 }
 
 .middle-widget-container-spacing {
-    
-    margin-top: 50px;
+
     margin-bottom: 50px;
 }
 
@@ -269,12 +273,6 @@ body.no-sidebar.boxed .alignwide {
 
 .inner-page-container {
     
-    margin-bottom: 50px;
-}
-
-.inner-page-container-spacing {
-    
-    margin-top: 50px;
     margin-bottom: 50px;
 }
 
@@ -1478,8 +1476,6 @@ body.no-sidebar.boxed .alignwide {
 */
 
 .breadcrumb {
-
-    margin-top: 40px;
     margin-bottom: 40px;
     background-color: #000;
     background-position: center;

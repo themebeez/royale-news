@@ -46,35 +46,45 @@ if ( ! function_exists( 'royale_news_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// Theme Thumbnail Sizes
+		// Theme Thumbnail Sizes.
 		add_image_size( 'royale-news-thumbnail-1', 200, 150, true );
 		add_image_size( 'royale-news-thumbnail-2', 370, 241, true );
 		add_image_size( 'royale-news-thumbnail-3', 761, 492, true );
-		add_image_size( 'royale-news-thumbnail-4', 900, 600, true ); // used for featured section sliders
+		add_image_size( 'royale-news-thumbnail-4', 900, 600, true ); // used for featured section sliders.
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'primary' => esc_html__( 'Primary', 'royale-news' ),
-			'social' => esc_html__( 'Social', 'royale-news' ),
-			'footer' => esc_html__( 'Footer', 'royale-news' ),
-		) );
+		register_nav_menus(
+			array(
+				'primary' => esc_html__( 'Primary', 'royale-news' ),
+				'social'  => esc_html__( 'Social', 'royale-news' ),
+				'footer'  => esc_html__( 'Footer', 'royale-news' ),
+			)
+		);
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
-		
-		add_theme_support( 'html5', array(
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5',
+			array(
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'royale_news_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
+		add_theme_support(
+			'custom-background',
+			apply_filters(
+				'royale_news_custom_background_args',
+				array(
+					'default-color' => 'ffffff',
+					'default-image' => '',
+				)
+			)
+		);
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -84,15 +94,18 @@ if ( ! function_exists( 'royale_news_setup' ) ) :
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
-		add_theme_support( 'custom-logo', array(
-			'height'      => 90,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		) );
+		add_theme_support(
+			'custom-logo',
+			array(
+				'height'      => 90,
+				'width'       => 250,
+				'flex-width'  => true,
+				'flex-height' => true,
+			)
+		);
 
 		/**
-		 * Remove block widget support in WordPress version 5.8 & later 
+		 * Remove block widget support in WordPress version 5.8 & later.
 		 *
 		 * @link https://make.wordpress.org/core/2021/06/29/block-based-widgets-editor-in-wordpress-5-8/
 		 */
@@ -119,66 +132,78 @@ add_action( 'after_setup_theme', 'royale_news_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function royale_news_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'royale-news' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'royale-news' ),
-		'before_widget' => '<div id="%1$s" class="col-md-12 widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<div class="widget-info clearfix"><h3 class="widget-title">',
-		'after_title'   => '</h3></div>',
-	) );
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'Featured Posts Widget Area', 'royale-news' ),
-		'id'            => 'sidebar-2',
-		'description'   => esc_html__( 'Add Main Featured Posts or Slider Featured Posts widgets here.', 'royale-news' ),
-		'before_widget' => '<div class="row news-section %2$s"><div class="col-md-12">',
-		'after_widget'  => '</div></div>',
-		'before_title'  => '<h3 class="section-title">',
-		'after_title'   => '</h3>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Sidebar', 'royale-news' ),
+			'id'            => 'sidebar-1',
+			'description'   => esc_html__( 'Add widgets here.', 'royale-news' ),
+			'before_widget' => '<div id="%1$s" class="col-md-12 widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<div class="widget-info clearfix"><h3 class="widget-title">',
+			'after_title'   => '</h3></div>',
+		)
+	);
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'FrontPage Widget Area', 'royale-news' ),
-		'id'            => 'sidebar-3',
-		'description'   => esc_html__( 'Add Main Highlight or Slider Highlight widgets here.', 'royale-news' ),
-		'before_widget' => '<div class="row news-section %2$s"><div class="col-md-12">',
-		'after_widget'  => '</div></div>',
-		'before_title'  => '<h3 class="section-title">',
-		'after_title'   => '</h3>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Featured Posts Widget Area', 'royale-news' ),
+			'id'            => 'sidebar-2',
+			'description'   => esc_html__( 'Add Main Featured Posts or Slider Featured Posts widgets here.', 'royale-news' ),
+			'before_widget' => '<div class="row news-section %2$s"><div class="col-md-12">',
+			'after_widget'  => '</div></div>',
+			'before_title'  => '<h3 class="section-title">',
+			'after_title'   => '</h3>',
+		)
+	);
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'FrontPage Bottom Widget Area', 'royale-news' ),
-		'id'            => 'sidebar-6',
-		'description'   => esc_html__( 'Add Widgets Here.', 'royale-news' ),
-		'before_widget' => '<div class="row news-section %2$s"><div class="col-md-12">',
-		'after_widget'  => '</div></div>',
-		'before_title'  => '<h3 class="section-title">',
-		'after_title'   => '</h3>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'FrontPage Widget Area', 'royale-news' ),
+			'id'            => 'sidebar-3',
+			'description'   => esc_html__( 'Add Main Highlight or Slider Highlight widgets here.', 'royale-news' ),
+			'before_widget' => '<div class="row news-section %2$s"><div class="col-md-12">',
+			'after_widget'  => '</div></div>',
+			'before_title'  => '<h3 class="section-title">',
+			'after_title'   => '</h3>',
+		)
+	);
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Widget Area', 'royale-news' ),
-		'id'            => 'sidebar-4',
-		'description'   => esc_html__( 'Add only four widgets here.', 'royale-news' ),
-		'before_widget' => '<div id="%1$s" class="col-md-3 widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<div class="widget-info"><h3 class="widget-title">',
-		'after_title'   => '</h3></div>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'FrontPage Bottom Widget Area', 'royale-news' ),
+			'id'            => 'sidebar-6',
+			'description'   => esc_html__( 'Add Widgets Here.', 'royale-news' ),
+			'before_widget' => '<div class="row news-section %2$s"><div class="col-md-12">',
+			'after_widget'  => '</div></div>',
+			'before_title'  => '<h3 class="section-title">',
+			'after_title'   => '</h3>',
+		)
+	);
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'Header Advertisement', 'royale-news' ),
-		'id'            => 'sidebar-5',
-		'description'   => esc_html__( 'Add advertisement here.', 'royale-news' ),
-		'before_widget' => '',
-		'after_widget'  => '',
-		'before_title'  => '',
-		'after_title'   => '',
-	) );
-	
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Widget Area', 'royale-news' ),
+			'id'            => 'sidebar-4',
+			'description'   => esc_html__( 'Add only four widgets here.', 'royale-news' ),
+			'before_widget' => '<div id="%1$s" class="col-md-3 widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<div class="widget-info"><h3 class="widget-title">',
+			'after_title'   => '</h3></div>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Header Advertisement', 'royale-news' ),
+			'id'            => 'sidebar-5',
+			'description'   => esc_html__( 'Add advertisement here.', 'royale-news' ),
+			'before_widget' => '',
+			'after_widget'  => '',
+			'before_title'  => '',
+			'after_title'   => '',
+		)
+	);
 }
 add_action( 'widgets_init', 'royale_news_widgets_init' );
 
@@ -188,7 +213,13 @@ add_action( 'widgets_init', 'royale_news_widgets_init' );
  */
 function royale_news_admin_enqueue() {
 
-	wp_enqueue_style( 'royale-news-admin', get_template_directory_uri() . '/admin/css/admin.css' );
+	wp_enqueue_style(
+		'royale-news-admin',
+		get_template_directory_uri() . '/admin/css/admin.css',
+		array(),
+		ROYALE_NEWS_VERSION,
+		'all'
+	);
 
 }
 add_action( 'admin_enqueue_scripts', 'royale_news_admin_enqueue' );
@@ -199,16 +230,40 @@ add_action( 'admin_enqueue_scripts', 'royale_news_admin_enqueue' );
  */
 function royale_news_scripts() {
 
+	wp_enqueue_style(
+		'royale-news-style',
+		get_stylesheet_uri(),
+		array(),
+		ROYALE_NEWS_VERSION,
+		'all'
+	);
 
-	wp_enqueue_style( 'royale-news-style', get_stylesheet_uri() );
+	if ( ! royale_news_get_option( 'royale_news_disable_google_fonts' ) ) {
 
-	wp_enqueue_style( 'royale-news-font', royale_news_fonts_url(), array(), null );
+		wp_enqueue_style(
+			'royale-news-font',
+			royale_news_fonts_url(),
+			array(),
+			ROYALE_NEWS_VERSION,
+			'all'
+		);
+	}
 
-	wp_enqueue_style( 'royale-news-skin', get_template_directory_uri() . '/assets/dist/css/main.css' );
-	
-	
-	wp_enqueue_script( 'royale-news-main', get_template_directory_uri() . '/assets/dist/js/bundle.min.js', array('jquery'), ROYALE_NEWS_VERSION, true );
+	wp_enqueue_style(
+		'royale-news-skin',
+		get_template_directory_uri() . '/assets/dist/css/main.css',
+		array(),
+		ROYALE_NEWS_VERSION,
+		'all'
+	);
 
+	wp_enqueue_script(
+		'royale-news-main',
+		get_template_directory_uri() . '/assets/dist/js/bundle.min.js',
+		array( 'jquery' ),
+		ROYALE_NEWS_VERSION,
+		true
+	);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -280,8 +335,3 @@ require get_template_directory() . '/themebeez/widgets/widget-init.php';
  * Load Widgets.
  */
 require get_template_directory() . '/themebeez/third-party/class-tgm-plugin-activation.php';
-
-/**
- * Load Everest Backup Plugin Notice.
- */
-require get_template_directory() . '/inc/ebwp-notice.php';
