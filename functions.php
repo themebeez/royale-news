@@ -238,13 +238,13 @@ function royale_news_scripts() {
 		'all'
 	);
 
-	if ( ! royale_news_get_option( 'royale_news_disable_google_fonts' ) ) {
+	if ( royale_news_has_google_fonts() ) {
 
-		wp_enqueue_style(
+		wp_enqueue_style( // phpcs:ignore
 			'royale-news-font',
-			royale_news_fonts_url(),
+			royale_news_get_google_fonts_url(),
 			array(),
-			ROYALE_NEWS_VERSION,
+			null,
 			'all'
 		);
 	}

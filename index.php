@@ -13,8 +13,15 @@
  */
 
 get_header();
+$royale_news_sidebar_position = royale_news_get_option( 'royale_news_sidebar_position' );
+
+$primary_container_class = '';
+
+if ( 'left' === $royale_news_sidebar_position || 'right' === $royale_news_sidebar_position ) {
+	$primary_container_class = 'royale-news-sidebar-position-' . $royale_news_sidebar_position;
+}
 ?>
-<div id="primary" class="content-area <?php royale_news_home_inner_container_class(); ?>">
+<div id="primary" class="content-area <?php royale_news_home_inner_container_class(); ?> <?php echo esc_attr( $primary_container_class ); ?>">
 	<main id="main" class="site-main">
 		<?php
 
@@ -22,7 +29,7 @@ get_header();
 
 		if (
 			is_active_sidebar( 'sidebar-2' ) &&
-			true === $royale_news_enable_feature
+			( true === $royale_news_enable_feature || 1 === $royale_news_enable_feature )
 		) {
 			?>
 			<div class="featured-widget-container">
@@ -36,8 +43,6 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<?php
-				$royale_news_sidebar_position = royale_news_get_option( 'royale_news_sidebar_position' );
-
 				if (
 					'none' === $royale_news_sidebar_position ||
 					! is_active_sidebar( 'sidebar-1' )

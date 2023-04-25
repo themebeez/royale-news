@@ -16,7 +16,10 @@ $royale_news_display_featured_image = royale_news_get_option( 'royale_news_post_
 		</div><!-- .news-section-info -->
 		<div class="single-news-content">
 			<?php
-			if ( has_post_thumbnail() && true === $royale_news_display_featured_image ) {
+			if (
+				has_post_thumbnail() &&
+				( 1 === $royale_news_display_featured_image || true === $royale_news_display_featured_image )
+			) {
 				?>
 				<div class="news-image">
 					<?php

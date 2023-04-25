@@ -11,7 +11,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	return;
 }
 ?>
-<div class="col-md-4 sticky-section">
+<div class="col-md-4 royale-news-sidebar sticky-section">
 	<div class="row clearfix sidebar">
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
 	</div><!-- .row.clearfix.sidebar -->

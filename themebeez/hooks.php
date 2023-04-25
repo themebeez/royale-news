@@ -204,7 +204,8 @@ if ( ! function_exists( 'royale_news_current_date_action' ) ) {
 	function royale_news_current_date_action() {
 
 		$show_date = royale_news_get_option( 'royale_news_enable_current_date' );
-		if ( true === $show_date ) {
+
+		if ( true === $show_date || 1 === $show_date ) {
 			?>
 			<div class="current-date-container">
 				<h5 class="current-date">
@@ -422,7 +423,7 @@ if ( ! function_exists( 'royale_news_search_action' ) ) {
 
 		$show_search_btn = royale_news_get_option( 'royale_news_enable_search_btn' );
 
-		if ( true === $show_search_btn ) {
+		if ( true === $show_search_btn || 1 === $show_search_btn ) {
 			?>
 			<div class="col-md-2 hidden-xs hidden-sm">
 				<div class="search-container pull-right">
@@ -542,7 +543,7 @@ if ( ! function_exists( 'royale_news_breadcrumb_action' ) ) {
 
 		$enable_breadcrumb = royale_news_get_option( 'royale_news_enable_breadcrumb' );
 
-		if ( true === $enable_breadcrumb ) {
+		if ( 1 === $enable_breadcrumb || true === $enable_breadcrumb ) {
 			?>
 			<div class="container">
 				<div class="row clearfix">
@@ -778,7 +779,7 @@ if ( ! function_exists( 'royale_news_scroll_top_action' ) ) {
 
 		$show_scroll_top = royale_news_get_option( 'royale_news_enable_scroll_top' );
 
-		if ( true === $show_scroll_top ) {
+		if ( true === $show_scroll_top || 1 === $show_scroll_top ) {
 			?>
 			<div class="scroll-top" id="scroll-top">
 				<i class="fa fa-long-arrow-up"></i><!-- .fa.fa-long-arrow.up -->
