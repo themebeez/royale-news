@@ -130,6 +130,8 @@ if ( ! function_exists( 'royale_news_ticker_action' ) ) {
 			$ticker_query = new WP_Query( $ticker_args );
 
 			if ( $ticker_query->have_posts() ) {
+
+				$ticker_content_class = 'col-xs-9 col-sm-9';
 				?>
 				<div class="row clearfix ticker-news-section">
 					<?php
@@ -145,9 +147,11 @@ if ( ! function_exists( 'royale_news_ticker_action' ) ) {
 							</div><!-- .ticker-title-container -->								
 						</div><!-- .col-xs-3.col-sm-3 -->
 						<?php
+					} else {
+						$ticker_content_class = 'col-xs-12 col-sm-12';
 					}
 					?>
-					<div class="col-xs-9 col-sm-9">
+					<div class="<?php echo esc_attr( $ticker_content_class ); ?>">
 						<div class="ticker-detail-container">
 							<div class="owl-carousel ticker-news-carousel">
 								<?php
