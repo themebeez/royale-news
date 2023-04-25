@@ -17,7 +17,7 @@ Royale News is a simple, clean, minimal and lightweight WordPress theme for crea
 
 == Copyright ==
 
-Royale News WordPress Theme, Copyright (C) 2022, themebeez
+Royale News WordPress Theme, Copyright (C) 2023, themebeez
 Royale News is distributed under the terms of the GNU GPL
 
 == Credits ==
@@ -81,6 +81,15 @@ Royale News includes support for Infinite Scroll in Jetpack.
 
 
 == Changelog ==
+
+== 2.2.1 - 25 April, 2022 ==
+
+* Removed: Recommendation of Everest Backup plugin.
+* Fixed: PHP error - `PHP Fatal error: Uncaught ArgumentCountError: Too few arguments to function get_day_link(), 1 passed in /breadcrumbs.php on line 802 and exactly 3 expected.`
+* Added: Typography options for body and headings.
+* Fix: Minor style fixes.
+* Fix: Minor PHP fixes.
+* Updated: WPCS maintained.
 
 == 2.2.0 - 29 May, 2022 ==
 

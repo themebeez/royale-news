@@ -589,54 +589,39 @@ $wp_customize->add_section(
 );
 
 $wp_customize->add_setting(
-	'royale_news_disable_google_fonts',
+	'royale_news_body_font',
 	array(
-		'sanitize_callback' => 'royale_news_sanitize_checkbox',
-		'default'           => $default['royale_news_disable_google_fonts'],
+		'default'           => $default['royale_news_body_font'],
+		'sanitize_callback' => 'royale_news_sanitize_font',
 	)
 );
 
 $wp_customize->add_control(
-	'royale_news_disable_google_fonts',
-	array(
-		'label'   => esc_html__( 'Disable Default Google Fonts', 'royale-news' ),
-		'section' => 'royale_news_typography_section',
-		'type'    => 'checkbox',
-	)
-);
-
-$wp_customize->add_setting(
-	'royale_news_body_font_family',
-	array(
-		'sanitize_callback' => 'sanitize_text_field',
-		'default'           => $default['royale_news_body_font_family'],
-	)
-);
-$wp_customize->add_control(
-	'royale_news_body_font_family',
-	array(
-		'label'           => esc_html__( 'Body Font Family', 'royale-news' ),
-		'section'         => 'royale_news_typography_section',
-		'settings'        => 'royale_news_body_font_family',
-		'type'            => 'text',
-		'active_callback' => 'royale_news_is_google_fonts_disabled',
+	new Royale_News_Customize_Typography_Control(
+		$wp_customize,
+		'royale_news_body_font',
+		array(
+			'label'   => esc_html__( 'Body Font', 'royale-news' ),
+			'section' => 'royale_news_typography_section',
+		)
 	)
 );
 
 $wp_customize->add_setting(
-	'royale_news_headings_font_family',
+	'royale_news_headings_font',
 	array(
-		'sanitize_callback' => 'sanitize_text_field',
-		'default'           => $default['royale_news_headings_font_family'],
+		'default'           => $default['royale_news_headings_font'],
+		'sanitize_callback' => 'royale_news_sanitize_font',
 	)
 );
+
 $wp_customize->add_control(
-	'royale_news_royale_news_headings_font_familybody_font_family',
-	array(
-		'label'           => esc_html__( 'Headings Font Family', 'royale-news' ),
-		'section'         => 'royale_news_typography_section',
-		'settings'        => 'royale_news_headings_font_family',
-		'type'            => 'text',
-		'active_callback' => 'royale_news_is_google_fonts_disabled',
+	new Royale_News_Customize_Typography_Control(
+		$wp_customize,
+		'royale_news_headings_font',
+		array(
+			'label'   => esc_html__( 'Headings Font', 'royale-news' ),
+			'section' => 'royale_news_typography_section',
+		)
 	)
 );

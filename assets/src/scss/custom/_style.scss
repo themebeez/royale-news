@@ -165,9 +165,7 @@ body.no-sidebar.boxed .alignwide {
 .ticker-news a {
 
     color: rgba(255, 255, 255, 1);
-    white-space: nowrap; 
     overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .current-date-container,
@@ -1539,7 +1537,6 @@ body.no-sidebar.boxed .alignwide {
 
 .nav-links {
     text-align: center;
-    overflow: auto;
 }
 
 .page-numbers {
@@ -2169,5 +2166,11 @@ b.fn {
         height:350px;
     }
 
+    .archive-section-content .news-image {
+        margin-bottom: 15px;
+    }
 
+    .royale-news-sidebar-position-right .royale-news-sidebar {
+        margin-top: 30px;
+    }
 } 

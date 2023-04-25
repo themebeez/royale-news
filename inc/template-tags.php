@@ -33,7 +33,7 @@ if ( ! function_exists( 'royale_news_posted_on' ) ) {
 
 		$posted_on = '';
 
-		if ( true === $show_date ) {
+		if ( true === $show_date || 1 === $show_date ) {
 			?>
 			<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark"><?php echo $time_string; // phpcs:ignore. ?></a>
 			<?php
@@ -41,7 +41,7 @@ if ( ! function_exists( 'royale_news_posted_on' ) ) {
 
 		$byline = '';
 
-		if ( true === $show_author ) {
+		if ( true === $show_author || 1 === $show_author ) {
 			?>
 			<span class="author vcard"><a class="url fn n" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo esc_html( get_the_author() ); ?></a>
 			<?php
@@ -52,7 +52,7 @@ if ( ! function_exists( 'royale_news_posted_on' ) ) {
 		$comment = '';
 
 		if (
-			true === $show_comments_no &&
+			( true === $show_comments_no || 1 === $show_comments_no ) &&
 			comments_open()
 		) {
 

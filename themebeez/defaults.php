@@ -71,9 +71,38 @@ if ( ! function_exists( 'royale_news_get_default_theme_options' ) ) {
 			'royale_news_show_comments_no'                => 1,
 			'royale_news_show_categories'                 => 1,
 			'royale_news_excerpt_length'                  => 30,
-			'royale_news_disable_google_fonts'            => false,
-			'royale_news_body_font_family'                => 'Arial, sans-serif',
-			'royale_news_headings_font_family'            => 'Arial, sans-serif',
+			'royale_news_body_font'                       => wp_json_encode(
+				array(
+					'source'        => 'google',
+					'font_family'   => 'Open Sans',
+					'font_variants' => '400,400italic',
+					'font_url'      => 'Open+Sans:ital@0;1',
+					'font_weight'   => '400',
+					'font_sizes'    => array(
+						'desktop' => array(
+							'value' => '16',
+							'unit'  => 'px',
+						),
+						'tablet'  => array(
+							'value' => '16',
+							'unit'  => 'px',
+						),
+						'mobile'  => array(
+							'value' => '16',
+							'unit'  => 'px',
+						),
+					),
+				)
+			),
+			'royale_news_headings_font'                   => wp_json_encode(
+				array(
+					'source'        => 'google',
+					'font_family'   => 'Roboto Condensed',
+					'font_variants' => '700,700italic',
+					'font_url'      => 'Roboto+Condensed:ital,wght@0,700;1,700',
+					'font_weight'   => '700',
+				)
+			),
 		);
 
 		return $defaults;
