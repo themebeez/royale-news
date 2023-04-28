@@ -108,7 +108,10 @@
 		customizeBody.on('click', '.unit-dropdown-toggle-button', function (event) {
 			event.preventDefault();
 			let thisButton = jQuery(this);
-			thisButton.next('.royale-news-unit-dropdown').toggleClass('dropdown-open');
+			let isUnitChangeable = thisButton.data('changeable');
+			if ( isUnitChangeable !== 'no' ) {
+				thisButton.next('.royale-news-unit-dropdown').toggleClass('dropdown-open');
+			}
 		});
 
 		// @since 1.0.2
