@@ -146,15 +146,34 @@ if ( ! function_exists( 'royale_news_sanitize_font' ) ) {
 		}
 
 		if ( isset( $value['font_sizes'] ) && ! empty( $value['font_sizes'] ) ) {
+
 			foreach ( $value['font_sizes'] as $device => $device_value ) {
-				$sanitized_value['font_sizes'][ $device ]['value'] = (int) $value['font_sizes'][ $device ]['value'];
-				$sanitized_value['font_sizes'][ $device ]['unit']  = sanitize_text_field( $value['font_sizes'][ $device ]['unit'] );
+
+				if (
+					'em' === $value['font_sizes'][ $device ]['unit'] ||
+					'rem' === $value['font_sizes'][ $device ]['unit']
+				) {
+					$sanitized_value['font_sizes'][ $device ]['value'] = (float) $value['font_sizes'][ $device ]['value'];
+				} else {
+					$sanitized_value['font_sizes'][ $device ]['value'] = (int) $value['font_sizes'][ $device ]['value'];
+				}
+
+				$sanitized_value['font_sizes'][ $device ]['unit'] = sanitize_text_field( $value['font_sizes'][ $device ]['unit'] );
 			}
 		}
 
 		if ( isset( $value['font_size'] ) ) {
-			$sanitized_value['font_size']['value'] = (int) $value['font_size']['value'];
-			$sanitized_value['font_size']['unit']  = sanitize_text_field( $value['font_size']['unit'] );
+
+			if (
+				'em' === $value['font_size']['unit'] ||
+				'rem' === $value['font_size']['unit']
+			) {
+				$sanitized_value['font_size']['value'] = (float) $value['font_size']['value'];
+			} else {
+				$sanitized_value['font_size']['value'] = (int) $value['font_size']['value'];
+			}
+
+			$sanitized_value['font_size']['unit'] = sanitize_text_field( $value['font_size']['unit'] );
 		}
 
 		if ( isset( $value['line_heights'] ) && ! empty( $value['line_heights'] ) ) {
@@ -168,15 +187,33 @@ if ( ! function_exists( 'royale_news_sanitize_font' ) ) {
 		}
 
 		if ( isset( $value['letter_spacings'] ) && ! empty( $value['letter_spacings'] ) ) {
+
 			foreach ( $value['letter_spacings'] as $device => $device_value ) {
-				$sanitized_value['letter_spacings'][ $device ]['value'] = (int) $value['letter_spacings'][ $device ]['value'];
-				$sanitized_value['letter_spacings'][ $device ]['unit']  = sanitize_text_field( $value['letter_spacings'][ $device ]['unit'] );
+
+				if (
+					'em' === $value['font_sizes'][ $device ]['unit'] ||
+					'rem' === $value['font_sizes'][ $device ]['unit']
+				) {
+					$sanitized_value['letter_spacings'][ $device ]['value'] = (float) $value['letter_spacings'][ $device ]['value'];
+				} else {
+					$sanitized_value['letter_spacings'][ $device ]['value'] = (int) $value['letter_spacings'][ $device ]['value'];
+				}
+
+				$sanitized_value['letter_spacings'][ $device ]['unit'] = sanitize_text_field( $value['letter_spacings'][ $device ]['unit'] );
 			}
 		}
 
 		if ( isset( $value['letter_spacing'] ) ) {
-			$sanitized_value['letter_spacing']['value'] = (int) $value['letter_spacing']['value'];
-			$sanitized_value['letter_spacing']['unit']  = sanitize_text_field( $value['letter_spacing']['unit'] );
+			if (
+				'em' === $value['font_size']['unit'] ||
+				'rem' === $value['font_size']['unit']
+			) {
+				$sanitized_value['letter_spacing']['value'] = (float) $value['letter_spacing']['value'];
+			} else {
+				$sanitized_value['letter_spacing']['value'] = (int) $value['letter_spacing']['value'];
+			}
+
+			$sanitized_value['letter_spacing']['unit'] = sanitize_text_field( $value['letter_spacing']['unit'] );
 		}
 
 		return ( ! empty( $sanitized_value ) ) ? wp_json_encode( $sanitized_value ) : $setting->value;

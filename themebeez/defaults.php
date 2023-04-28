@@ -80,16 +80,19 @@ if ( ! function_exists( 'royale_news_get_default_theme_options' ) ) {
 					'font_weight'   => '400',
 					'font_sizes'    => array(
 						'desktop' => array(
-							'value' => '16',
-							'unit'  => 'px',
+							'value'           => '16',
+							'unit'            => 'px',
+							'unit_changeable' => 'no',
 						),
 						'tablet'  => array(
-							'value' => '16',
-							'unit'  => 'px',
+							'value'           => '16',
+							'unit'            => 'px',
+							'unit_changeable' => 'no',
 						),
 						'mobile'  => array(
-							'value' => '16',
-							'unit'  => 'px',
+							'value'           => '16',
+							'unit'            => 'px',
+							'unit_changeable' => 'no',
 						),
 					),
 				)
