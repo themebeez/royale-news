@@ -82,7 +82,7 @@ Royale News includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
-== 2.2.1 - 28 April, 2022 ==
+== 2.2.1 - 2 May, 2023 ==
 
 * Removed: Recommendation of Everest Backup plugin.
 * Fixed: PHP error - `PHP Fatal error: Uncaught ArgumentCountError: Too few arguments to function get_day_link(), 1 passed in /breadcrumbs.php on line 802 and exactly 3 expected.`
