@@ -1,11 +1,11 @@
 === Royale News ===
 
 Contributors: themebeez
-Requires PHP: 7 or higher
+Requires PHP: 7.0
 Requires at least: 5.0
 Tested up to: 6.5.2
 Stable tag: 2.2.2
-License: GNU General Public License v2 or later
+License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, news, two-columns, three-columns, theme-options, footer-widgets, blog
 
@@ -18,7 +18,17 @@ Royale News is a simple, clean, minimal and lightweight WordPress theme for crea
 == Copyright ==
 
 Royale News WordPress Theme, Copyright (C) 2024, themebeez
-Royale News is distributed under the terms of the GNU GPL
+Royale News is distributed under the terms of the GNU GPL.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
 
 == Credits ==
 
@@ -55,16 +65,12 @@ https://pxhere.com/en/photo/1046965 ( https://pxhere.com/en/license | https://cr
 https://pxhere.com/en/photo/640964 ( https://pxhere.com/en/license | https://creativecommons.org/publicdomain/zero/1.0/ - CCO )
 https://pxhere.com/en/photo/830746 ( https://pxhere.com/en/license | https://creativecommons.org/publicdomain/zero/1.0/ - CCO )
 
-
-
 Other Images  
 image-1.jpg self created GPLv2 
 image-2.jpg self created GPLv2 
 image-3.jpg self created GPLv2
 Header advertisement self created GPLv2
 close-btn.png self created GPLv2
-
-
 
 == Installation ==
 
@@ -83,7 +89,8 @@ Royale News includes support for Infinite Scroll in Jetpack.
 == Changelog ==
 
 == 2.2.2 - 25 April, 2024 ==
--Tested upto PHP 8.3.0 and WordPress 6.5.2
+
+* Tested: PHP version 8.3.0 and WordPress version 6.5.2.
 
 == 2.2.1 - 2 May, 2023 ==
 
