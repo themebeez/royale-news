@@ -15,7 +15,7 @@ if ( ! function_exists( 'royale_news_search_form' ) ) {
 	 */
 	function royale_news_search_form() {
 
-		return '<form role="search" method="get" class="search-form" action="' . esc_url( home_url( '/' ) ) . '" ><div class="input-group stylish-input-group"><label class="screen-reader-text" for="s">' . esc_html__( 'Search for:', 'royale-news' ) . '</label><input type="text" value="' . get_search_query() . '" name="s" class="form-control" /><span class="input-group-addon"><button type="submit" id="searchsubmit" value="' . esc_attr__( 'Search', 'royale-news' ) . '"><i class="fa fa-search"></i></button></span></div></form>';
+		return '<form method="get" class="search-form" action="' . esc_url( home_url( '/' ) ) . '" ><div class="input-group stylish-input-group"><label class="screen-reader-text" for="s">' . esc_html__( 'Search for:', 'royale-news' ) . '</label><input type="text" value="' . get_search_query() . '" name="s" class="form-control" /><span class="input-group-addon"><button type="submit" id="searchsubmit" value="' . esc_attr__( 'Search', 'royale-news' ) . '"><i class="fa fa-search"></i></button></span></div></form>';
 	}
 }
 add_filter( 'get_search_form', 'royale_news_search_form', 20 );
