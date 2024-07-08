@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-06-21T12:23:39+00:00\n"
+"POT-Creation-Date: 2024-07-08T07:44:12+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: royale-news\n"
@@ -347,119 +347,119 @@ msgid "Copyright Text"
 msgstr ""
 
 #: themebeez/customizer/options.php:240
-msgid "Insert copyright text"
-msgstr ""
-
-#: themebeez/customizer/options.php:252
-msgid "Scroll Top Button Option"
+msgid "You can use {copy}, {year}, {site_title}, and {theme_author} placeholders to display copyright icon, current year, site title,and theme author respectively in the copyright text."
 msgstr ""
 
 #: themebeez/customizer/options.php:253
+msgid "Scroll Top Button Option"
+msgstr ""
+
+#: themebeez/customizer/options.php:254
 msgid "Configure Scroll Top Button"
 msgstr ""
 
-#: themebeez/customizer/options.php:271
+#: themebeez/customizer/options.php:272
 msgid "Show Scroll Top Button"
 msgstr ""
 
-#: themebeez/customizer/options.php:288
+#: themebeez/customizer/options.php:289
 msgid "Breadcrumb Option"
 msgstr ""
 
-#: themebeez/customizer/options.php:289
+#: themebeez/customizer/options.php:290
 msgid "Configure Breadcrumb"
 msgstr ""
 
-#: themebeez/customizer/options.php:307
+#: themebeez/customizer/options.php:308
 msgid "Show Breadcrumb"
 msgstr ""
 
-#: themebeez/customizer/options.php:325
+#: themebeez/customizer/options.php:326
 msgid "Blog Page Option"
 msgstr ""
 
-#: themebeez/customizer/options.php:326
+#: themebeez/customizer/options.php:327
 msgid "Configure Blog page"
 msgstr ""
 
-#: themebeez/customizer/options.php:344
+#: themebeez/customizer/options.php:345
 msgid "Show Featured Posts"
 msgstr ""
 
-#: themebeez/customizer/options.php:362
+#: themebeez/customizer/options.php:363
 msgid "Post Single Options"
 msgstr ""
 
-#: themebeez/customizer/options.php:363
+#: themebeez/customizer/options.php:364
 msgid "Configure post single"
 msgstr ""
 
-#: themebeez/customizer/options.php:379
-#: themebeez/customizer/options.php:412
+#: themebeez/customizer/options.php:380
+#: themebeez/customizer/options.php:413
 msgid "Display Featured Image"
 msgstr ""
 
-#: themebeez/customizer/options.php:395
+#: themebeez/customizer/options.php:396
 msgid "Page Single Options"
 msgstr ""
 
-#: themebeez/customizer/options.php:396
+#: themebeez/customizer/options.php:397
 msgid "Configure page single"
 msgstr ""
 
-#: themebeez/customizer/options.php:429
+#: themebeez/customizer/options.php:430
 msgid "Sidebar Option"
 msgstr ""
 
-#: themebeez/customizer/options.php:430
+#: themebeez/customizer/options.php:431
 msgid "Configure Sidebar Position"
 msgstr ""
 
-#: themebeez/customizer/options.php:446
+#: themebeez/customizer/options.php:447
 msgid "Sidebar Position"
 msgstr ""
 
-#: themebeez/customizer/options.php:447
+#: themebeez/customizer/options.php:448
 msgid "Select Sidebar Postion. Select none to hide sidebar."
 msgstr ""
 
-#: themebeez/customizer/options.php:465
+#: themebeez/customizer/options.php:466
 msgid "Post Meta Options"
 msgstr ""
 
-#: themebeez/customizer/options.php:482
+#: themebeez/customizer/options.php:483
 msgid "Enable Post Date"
 msgstr ""
 
-#: themebeez/customizer/options.php:500
+#: themebeez/customizer/options.php:501
 msgid "Enable Author Name"
 msgstr ""
 
-#: themebeez/customizer/options.php:518
+#: themebeez/customizer/options.php:519
 msgid "Enable Comments Number"
 msgstr ""
 
-#: themebeez/customizer/options.php:536
+#: themebeez/customizer/options.php:537
 msgid "Enable Categories"
 msgstr ""
 
-#: themebeez/customizer/options.php:552
+#: themebeez/customizer/options.php:553
 msgid "Excerpt"
 msgstr ""
 
-#: themebeez/customizer/options.php:568
+#: themebeez/customizer/options.php:569
 msgid "Excerpt Length"
 msgstr ""
 
-#: themebeez/customizer/options.php:586
+#: themebeez/customizer/options.php:587
 msgid "Typography"
 msgstr ""
 
-#: themebeez/customizer/options.php:604
+#: themebeez/customizer/options.php:605
 msgid "Body Font"
 msgstr ""
 
-#: themebeez/customizer/options.php:623
+#: themebeez/customizer/options.php:624
 msgid "Headings Font"
 msgstr ""
 
@@ -525,16 +525,6 @@ msgstr ""
 
 #: themebeez/hooks.php:591
 msgid "&raquo;"
-msgstr ""
-
-#. translators: 1: copyright text, 2: theme name, 3: theme URL
-#: themebeez/hooks.php:690
-msgid "%1$s %2$s by %3$s"
-msgstr ""
-
-#. translators: 1: theme name, 2: theme URL
-#: themebeez/hooks.php:703
-msgid "%1$s by %2$s"
 msgstr ""
 
 #: themebeez/third-party/breadcrumbs.php:260
