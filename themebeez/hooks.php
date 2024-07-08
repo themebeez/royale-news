@@ -682,28 +682,27 @@ if ( ! function_exists( 'royale_news_copyright_action' ) ) {
 			<div class="copyright-container">
 				<?php
 				if ( ! empty( $copyright_text ) ) {
-					?>
-					<h5 class="copyright-text">
-						<?php
-						printf(
-							/* translators: 1: copyright text, 2: theme name, 3: theme URL */
-							esc_html__( '%1$s %2$s by %3$s', 'royale-news' ),
-							$copyright_text, // phpcs:ignore
-							'Royale News',
-							'<a href="' . esc_url( 'https://themebeez.com' ) . '" rel="designer">Themebeez</a>'
-						);
-						?>
-					</h5><!-- .copyright-text -->
-					<?php
-				} else {
-					?>
-					<h5 class="copyright-text">
-						<?php
-						/* translators: 1: theme name, 2: theme URL */
-						printf( esc_html__( '%1$s by %2$s', 'royale-news' ), 'Royale News', '<a href="' . esc_url( 'https://themebeez.com' ) . '" rel="designer">Themebeez</a>' );
-						?>
-					</h5><!-- .copyright-text -->
-					<?php
+					if ( str_contains( $copyright_text, '{copy}' ) ) {
+						$copy_right_symbol = '&copy;';
+						$copyright_text    = str_replace( '{copy}', $copy_right_symbol, $copyright_text );
+					}
+
+					if ( str_contains( $copyright_text, '{year}' ) ) {
+						$year           = gmdate( 'Y' );
+						$copyright_text = str_replace( '{year}', $year, $copyright_text );
+					}
+
+					if ( str_contains( $copyright_text, '{site_title}' ) ) {
+						$title          = get_bloginfo( 'name' );
+						$copyright_text = str_replace( '{site_title}', $title, $copyright_text );
+					}
+
+					if ( str_contains( $copyright_text, '{theme_author}' ) ) {
+						$theme_author   = '<a href="https://themebeez.com" rel="author" target="_blank"> By Themebeez</a>';
+						$copyright_text = str_replace( '{theme_author}', $theme_author, $copyright_text );
+					}
+
+					echo wp_kses_post( $copyright_text );
 				}
 				?>
 			</div><!-- .copyright-container -->
