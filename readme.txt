@@ -87,6 +87,9 @@ Royale News includes support for Infinite Scroll in Jetpack.
 
 
 == Changelog ==
+== 2.2.2 - ?, 2024 ==
+
+* Tested: PHP version 8.3.0 and WordPress version 6.6.
 
 == 2.2.2 - 25 April, 2024 ==
 
