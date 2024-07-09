@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-07-08T07:44:12+00:00\n"
+"POT-Creation-Date: 2024-07-09T07:20:40+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: royale-news\n"
@@ -461,6 +461,10 @@ msgstr ""
 
 #: themebeez/customizer/options.php:624
 msgid "Headings Font"
+msgstr ""
+
+#: themebeez/defaults.php:63
+msgid "Copyright {copy} {year} {site_title}. All rights reserved."
 msgstr ""
 
 #: themebeez/filters.php:18
