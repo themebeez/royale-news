@@ -240,7 +240,7 @@ $wp_customize->add_control(
 		'description' => esc_html__( 'You can use {copy}, {year}, {site_title}, and {theme_author} placeholders to display copyright icon, current year, site title,and theme author respectively in the copyright text.', 'royale-news' ),
 		'section'     => 'royale_news_copyright_options',
 		'settings'    => 'royale_news_copyright_text',
-		'type'        => 'text',
+		'type'        => 'textarea',
 	)
 );
 
