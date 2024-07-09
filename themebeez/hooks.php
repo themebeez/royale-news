@@ -698,11 +698,14 @@ if ( ! function_exists( 'royale_news_copyright_action' ) ) {
 					}
 
 					if ( str_contains( $copyright_text, '{theme_author}' ) ) {
-						$theme_author   = '<a href="https://themebeez.com" rel="author" target="_blank"> By Themebeez</a>';
+						$theme_author   = '<a href="https://themebeez.com" rel="author" target="_blank">Themebeez</a>';
 						$copyright_text = str_replace( '{theme_author}', $theme_author, $copyright_text );
 					}
-
-					echo wp_kses_post( $copyright_text );
+					?>
+					<h5 class="copyright-text">
+						<p><?php echo wp_kses_post( $copyright_text ); ?></p>
+					</h5><!-- .copyright-text -->
+					<?php
 				}
 				?>
 			</div><!-- .copyright-container -->

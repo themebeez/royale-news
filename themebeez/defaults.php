@@ -60,7 +60,7 @@ if ( ! function_exists( 'royale_news_get_default_theme_options' ) ) {
 			'royale_news_enable_current_date'             => 1,
 			'royale_news_enable_search_btn'               => 1,
 			'royale_news_enable_breadcrumb'               => 1,
-			'royale_news_copyright_text'                  => '',
+			'royale_news_copyright_text'                  => esc_html__( 'Copyright {copy} {year} {site_title}. All rights reserved.', 'royale-news' ),
 			'royale_news_enable_scroll_top'               => 1,
 			'royale_news_enable_featured_post'            => 0,
 			'royale_news_post_single_enable_featured_img' => 1,
