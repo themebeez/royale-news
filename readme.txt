@@ -3,8 +3,8 @@
 Contributors: themebeez
 Requires PHP: 7.0
 Requires at least: 5.0
-Tested up to: 6.5.2
-Stable tag: 2.2.2
+Tested up to: 6.7
+Stable tag: 2.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, news, two-columns, three-columns, theme-options, footer-widgets, blog
@@ -87,9 +87,10 @@ Royale News includes support for Infinite Scroll in Jetpack.
 
 
 == Changelog ==
-== 2.2.2 - ?, 2024 ==
-
-* Tested: PHP version 8.3.0 and WordPress version 6.6.
+== 2.2.3 - 26 December, 2024 ==
+-Added: Udp Agent to track user's non sensitive data.
+-Added: Theme Welcome Notice.
+-Tested: PHP version 8.3.11 and WordPress version 6.7.
 
 == 2.2.2 - 25 April, 2024 ==
 

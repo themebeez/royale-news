@@ -277,6 +277,13 @@ add_action( 'wp_enqueue_scripts', 'royale_news_scripts' );
 require get_template_directory() . '/inc/custom-header.php';
 
 /**
+ * UDP agent to track user's non sensitive data.
+ *
+ * @since 2.2.3.
+ */
+require get_template_directory() . '/inc/udp/init.php';
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
@@ -335,3 +342,24 @@ require get_template_directory() . '/themebeez/widgets/widget-init.php';
  * Load Widgets.
  */
 require get_template_directory() . '/themebeez/third-party/class-tgm-plugin-activation.php';
+
+
+/**
+* Adds welcome notice to admin dashboard.
+*
+* @since 1.1.7.
+*/
+require get_template_directory() . '/admin/welcome-notice/class-royale-news-theme-welcome-notice.php';
+
+add_action(
+	'init',
+	function () {
+		new Royale_News_Theme_Welcome_Notice(
+			'Royale News',
+			admin_url( 'admin.php?page=royale-news' ),
+			array(
+				'themebeez-toolkit/themebeez-toolkit.php' => 'https://downloads.wordpress.org/plugin/themebeez-toolkit.zip',
+			)
+		);
+	}
+);
