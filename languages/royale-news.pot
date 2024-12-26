@@ -9,9 +9,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-07-09T07:20:40+00:00\n"
+"POT-Creation-Date: 2024-12-26T09:17:34+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.10.0\n"
+"X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: royale-news\n"
 
 #. Theme Name of the theme
@@ -49,6 +49,29 @@ msgstr ""
 
 #: 404.php:33
 msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr ""
+
+#. translators: %s: current user's display name
+#: admin/welcome-notice/class-royale-news-theme-welcome-notice.php:137
+msgid "Hello, %s"
+msgstr ""
+
+#. translators: %s: theme name
+#: admin/welcome-notice/class-royale-news-theme-welcome-notice.php:146
+msgid "Welcome to %s"
+msgstr ""
+
+#. translators: 1: theme name
+#: admin/welcome-notice/class-royale-news-theme-welcome-notice.php:155
+msgid "Thank you for choosing %1$s! To get started with %1$s and import starter templates, install Themebeez Toolkit plugin by clicking on the button below! We hope you enjoy using %1$s."
+msgstr ""
+
+#: admin/welcome-notice/class-royale-news-theme-welcome-notice.php:165
+msgid "Get Started"
+msgstr ""
+
+#: admin/welcome-notice/class-royale-news-theme-welcome-notice.php:175
+msgid "Notice Image"
 msgstr ""
 
 #. translators: 1: title.
