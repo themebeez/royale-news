@@ -87,10 +87,12 @@ Royale News includes support for Infinite Scroll in Jetpack.
 
 
 == Changelog ==
+
 == 2.2.3 - 26 December, 2024 ==
--Added: Udp Agent to track user's non sensitive data.
--Added: Theme Welcome Notice.
--Tested: PHP version 8.3.11 and WordPress version 6.7.
+
+* Added: Udp Agent to track user's non sensitive data.
+* Added: Theme Welcome Notice.
+* Tested: PHP version 8.3.11 and WordPress version 6.7.
 
 == 2.2.2 - 25 April, 2024 ==
 
