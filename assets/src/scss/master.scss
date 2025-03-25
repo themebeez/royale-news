@@ -22,27 +22,15 @@
 
 
 
-// bootstrap 3.3.7
-
-@import 'framework/bootstrap';
-
-
-
 // Variables for color & Typography
 
 @import 'variables/color';
 @import 'variables/typography';
 
 
-// Icon fonts ( fontAwesome )
-
-@import 'fonts/fontAwesome';
-
-
 
 // External plugins & library
 
-@import 'plugins/animate';
 @import 'plugins/meanmenu';
 @import 'plugins/owlcarousel';
 @import 'plugins/retina';
