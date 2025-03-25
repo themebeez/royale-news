@@ -238,6 +238,22 @@ function royale_news_scripts() {
 		'all'
 	);
 
+	wp_enqueue_style(
+		'bootstrap',
+		get_template_directory_uri() . '/assets/libraries/bootstrap/css/bootstrap.css',
+		array(),
+		'3.3.7',
+		'all'
+	);
+
+	wp_enqueue_style(
+		'font-awesome',
+		get_template_directory_uri() . '/assets/libraries/fontAwesome/all.min.css',
+		array(),
+		'6.7.2',
+		'all'
+	);
+
 	if ( royale_news_has_google_fonts() ) {
 
 		wp_enqueue_style( // phpcs:ignore

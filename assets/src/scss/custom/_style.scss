@@ -224,9 +224,10 @@ body.no-sidebar.boxed .alignwide {
     content: "\f0d5";
 }
 
-.social-menu li a[href*="twitter.com"]::before {
+.social-menu li a[href*="twitter.com"]::before,
+.social-menu li a[href*="x.com"]::before {
 
-    content: "\f099";
+    content: "\e61b";
 }
 
 .social-menu li a[href*="instagram.com"]::before {

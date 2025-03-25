@@ -38,7 +38,7 @@ GNU General Public License for more details.
 
 * Breadcrumbs Trail https://github.com/justintadlock/breadcrumb-trail, Copyright and License : Breadcrumb Trail is licensed under the GNU GPL, version 2 or later, 2008 – 2015 © Justin Tadlock.
 
-* Font Awesome http://fontawesome.io/license/, [SIL OFL 1.1, MIT](http://scripts.sil.org/OFL, http://opensource.org/licenses/mit-license.html)
+* Font Awesome https://fontawesome.com/license/free, [SIL OFL 1.1, MIT](http://scripts.sil.org/OFL, http://opensource.org/licenses/mit-license.html)
 
 * Bootstrap https://github.com/twbs/bootstrap/blob/master/LICENSE, Copyright (c) 2011-2016 Twitter, Inc., [MIT](http://opensource.org/licenses/MIT)
 
@@ -47,8 +47,6 @@ GNU General Public License for more details.
 * Meanmenu https://github.com/meanthemes/meanMenu, (C) 2012-2014 Chris Wharton, [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 
 * Choosen https://github.com/harvesthq/chosen, Copyright (c) 2011-2018 Harvest, [MIT](http://opensource.org/licenses/MIT)
-
-* animate.css https://github.com/daneden/animate.css, [MIT](http://opensource.org/licenses/MIT)
 
 * Theia Sticky Sidebar https://github.com/WeCodePixels/theia-sticky-sidebar [MIT](http://opensource.org/licenses/MIT)
 
