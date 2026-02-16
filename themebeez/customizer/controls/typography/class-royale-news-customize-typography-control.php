@@ -1161,7 +1161,7 @@ class Royale_News_Customize_Typography_Control extends WP_Customize_Control {
 
 		$content = json_decode( $body, true );
 
-		return $content['items'];
+		return ( is_array( $content ) && isset( $content['items'] ) ) ? $content['items'] : array();
 	}
 
 	/**
